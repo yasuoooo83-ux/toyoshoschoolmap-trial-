@@ -1,0 +1,3466 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>校内マップ案内（NFCタグ対応）</title>
+  <link rel="icon" href="data:," />
+  <style>/* Tailwind CSS (build) */
+*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.\!container{width:100%!important}.container{width:100%}@media (min-width:640px){.\!container{max-width:640px!important}.container{max-width:640px}}@media (min-width:768px){.\!container{max-width:768px!important}.container{max-width:768px}}@media (min-width:1024px){.\!container{max-width:1024px!important}.container{max-width:1024px}}@media (min-width:1280px){.\!container{max-width:1280px!important}.container{max-width:1280px}}@media (min-width:1536px){.\!container{max-width:1536px!important}.container{max-width:1536px}}.pointer-events-none{pointer-events:none}.pointer-events-auto{pointer-events:auto}.visible{visibility:visible}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0}.bottom-0{bottom:0}.bottom-2\.5{bottom:.625rem}.left-1\/2{left:50%}.left-2\.5{left:.625rem}.right-2\.5{right:.625rem}.top-2\.5{top:.625rem}.z-20{z-index:20}.z-30{z-index:30}.z-50{z-index:50}.-mx-2\.5{margin-left:-.625rem;margin-right:-.625rem}.my-0\.5{margin-top:.125rem;margin-bottom:.125rem}.mb-1{margin-bottom:.25rem}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-1\.5{height:.375rem}.h-2{height:.5rem}.h-2\.5{height:.625rem}.h-3\.5{height:.875rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-8{height:2rem}.h-\[100dvh\]{height:100dvh}.h-\[48dvh\]{height:48dvh}.h-\[52dvh\]{height:52dvh}.h-\[80dvh\]{height:80dvh}.max-h-\[90vh\]{max-height:90vh}.min-h-0{min-height:0}.min-h-\[280px\]{min-height:280px}.w-1\.5{width:.375rem}.w-2{width:.5rem}.w-2\.5{width:.625rem}.w-3\.5{width:.875rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-9{width:2.25rem}.w-full{width:100%}.w-screen{width:100vw}.min-w-0{min-width:0}.max-w-2xl{max-width:42rem}.max-w-\[90vw\]{max-width:90vw}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.-translate-x-1\/2{--tw-translate-x:-50%}.-translate-x-1\/2,.-translate-y-2{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-2{--tw-translate-y:-0.5rem}.translate-y-0{--tw-translate-y:0px}.transform,.translate-y-0{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.resize{resize:both}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.space-y-1>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.25rem*var(--tw-space-y-reverse))}.space-y-1\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.375rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.375rem*var(--tw-space-y-reverse))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.space-y-5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.break-all{word-break:break-all}.rounded{border-radius:.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-b-2{border-bottom-width:2px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.border-amber-400{--tw-border-opacity:1;border-color:rgb(251 191 36/var(--tw-border-opacity,1))}.border-amber-400\/40{border-color:rgba(251,191,36,.4)}.border-amber-400\/60{border-color:rgba(251,191,36,.6)}.border-amber-500\/40{border-color:rgba(245,158,11,.4)}.border-emerald-500\/30{border-color:rgba(16,185,129,.3)}.border-emerald-500\/40{border-color:rgba(16,185,129,.4)}.border-indigo-500\/30{border-color:rgba(99,102,241,.3)}.border-indigo-500\/40{border-color:rgba(99,102,241,.4)}.border-purple-500\/30{border-color:rgba(168,85,247,.3)}.border-rose-500\/40{border-color:rgba(244,63,94,.4)}.border-sky-400{--tw-border-opacity:1;border-color:rgb(56 189 248/var(--tw-border-opacity,1))}.border-sky-400\/40{border-color:rgba(56,189,248,.4)}.border-sky-400\/70{border-color:rgba(56,189,248,.7)}.border-sky-500\/30{border-color:rgba(14,165,233,.3)}.border-sky-500\/40{border-color:rgba(14,165,233,.4)}.border-slate-600{--tw-border-opacity:1;border-color:rgb(71 85 105/var(--tw-border-opacity,1))}.border-slate-600\/80{border-color:rgba(71,85,105,.8)}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85/var(--tw-border-opacity,1))}.border-slate-700\/80{border-color:rgba(51,65,85,.8)}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59/var(--tw-border-opacity,1))}.border-slate-800\/80{border-color:rgba(30,41,59,.8)}.border-transparent{border-color:transparent}.border-white{--tw-border-opacity:1;border-color:rgb(255 255 255/var(--tw-border-opacity,1))}.bg-amber-400{--tw-bg-opacity:1;background-color:rgb(251 191 36/var(--tw-bg-opacity,1))}.bg-amber-400\/10{background-color:rgba(251,191,36,.1)}.bg-amber-500\/15{background-color:rgba(245,158,11,.15)}.bg-amber-500\/20{background-color:rgba(245,158,11,.2)}.bg-emerald-400{--tw-bg-opacity:1;background-color:rgb(52 211 153/var(--tw-bg-opacity,1))}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129/var(--tw-bg-opacity,1))}.bg-emerald-500\/20{background-color:rgba(16,185,129,.2)}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105/var(--tw-bg-opacity,1))}.bg-indigo-500\/20{background-color:rgba(99,102,241,.2)}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229/var(--tw-bg-opacity,1))}.bg-indigo-600\/30{background-color:rgba(79,70,229,.3)}.bg-purple-500\/20{background-color:rgba(168,85,247,.2)}.bg-rose-500\/20{background-color:rgba(244,63,94,.2)}.bg-rose-900\/60{background-color:rgba(136,19,55,.6)}.bg-rose-950\/60{background-color:rgba(76,5,25,.6)}.bg-sky-500{--tw-bg-opacity:1;background-color:rgb(14 165 233/var(--tw-bg-opacity,1))}.bg-sky-500\/20{background-color:rgba(14,165,233,.2)}.bg-sky-500\/25{background-color:rgba(14,165,233,.25)}.bg-sky-600{--tw-bg-opacity:1;background-color:rgb(2 132 199/var(--tw-bg-opacity,1))}.bg-sky-950\/20{background-color:rgba(8,47,73,.2)}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85/var(--tw-bg-opacity,1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59/var(--tw-bg-opacity,1))}.bg-slate-800\/50{background-color:rgba(30,41,59,.5)}.bg-slate-800\/60{background-color:rgba(30,41,59,.6)}.bg-slate-800\/70{background-color:rgba(30,41,59,.7)}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42/var(--tw-bg-opacity,1))}.bg-slate-900\/80{background-color:rgba(15,23,42,.8)}.bg-slate-900\/90{background-color:rgba(15,23,42,.9)}.bg-slate-900\/95{background-color:rgba(15,23,42,.95)}.bg-slate-950{--tw-bg-opacity:1;background-color:rgb(2 6 23/var(--tw-bg-opacity,1))}.bg-slate-950\/80{background-color:rgba(2,6,23,.8)}.bg-slate-950\/90{background-color:rgba(2,6,23,.9)}.p-1{padding:.25rem}.p-1\.5{padding:.375rem}.p-2{padding:.5rem}.p-2\.5{padding:.625rem}.p-3{padding:.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.px-1{padding-left:.25rem;padding-right:.25rem}.px-1\.5{padding-left:.375rem;padding-right:.375rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-2\.5{padding-left:.625rem;padding-right:.625rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-3\.5{padding-top:.875rem;padding-bottom:.875rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pb-0\.5{padding-bottom:.125rem}.pl-7{padding-left:1.75rem}.pr-2\.5{padding-right:.625rem}.text-left{text-align:left}.text-center{text-align:center}.font-mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[12px\]{font-size:12px}.text-\[13px\]{font-size:13px}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.leading-snug{line-height:1.375}.tracking-tight{letter-spacing:-.025em}.text-amber-200{--tw-text-opacity:1;color:rgb(253 230 138/var(--tw-text-opacity,1))}.text-amber-300{--tw-text-opacity:1;color:rgb(252 211 77/var(--tw-text-opacity,1))}.text-emerald-300{--tw-text-opacity:1;color:rgb(110 231 183/var(--tw-text-opacity,1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153/var(--tw-text-opacity,1))}.text-indigo-200{--tw-text-opacity:1;color:rgb(199 210 254/var(--tw-text-opacity,1))}.text-indigo-300{--tw-text-opacity:1;color:rgb(165 180 252/var(--tw-text-opacity,1))}.text-purple-300{--tw-text-opacity:1;color:rgb(216 180 254/var(--tw-text-opacity,1))}.text-rose-200{--tw-text-opacity:1;color:rgb(254 205 211/var(--tw-text-opacity,1))}.text-rose-300{--tw-text-opacity:1;color:rgb(253 164 175/var(--tw-text-opacity,1))}.text-rose-400{--tw-text-opacity:1;color:rgb(251 113 133/var(--tw-text-opacity,1))}.text-sky-200{--tw-text-opacity:1;color:rgb(186 230 253/var(--tw-text-opacity,1))}.text-sky-300{--tw-text-opacity:1;color:rgb(125 211 252/var(--tw-text-opacity,1))}.text-slate-100{--tw-text-opacity:1;color:rgb(241 245 249/var(--tw-text-opacity,1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240/var(--tw-text-opacity,1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225/var(--tw-text-opacity,1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184/var(--tw-text-opacity,1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139/var(--tw-text-opacity,1))}.text-slate-950{--tw-text-opacity:1;color:rgb(2 6 23/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.placeholder-slate-500::-moz-placeholder{--tw-placeholder-opacity:1;color:rgb(100 116 139/var(--tw-placeholder-opacity,1))}.placeholder-slate-500::placeholder{--tw-placeholder-opacity:1;color:rgb(100 116 139/var(--tw-placeholder-opacity,1))}.opacity-0{opacity:0}.opacity-100{opacity:1}.opacity-40{opacity:.4}.shadow{--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color)}.shadow,.shadow-2xl{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.shadow-lg,.shadow-xl{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color)}.outline{outline-style:solid}.ring{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px)}.backdrop-blur-md,.backdrop-blur-sm{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-300{transition-duration:.3s}.hover\:border-sky-400:hover{--tw-border-opacity:1;border-color:rgb(56 189 248/var(--tw-border-opacity,1))}.hover\:bg-emerald-500:hover{--tw-bg-opacity:1;background-color:rgb(16 185 129/var(--tw-bg-opacity,1))}.hover\:bg-indigo-600\/50:hover{background-color:rgba(79,70,229,.5)}.hover\:bg-rose-800\/70:hover{background-color:rgba(159,18,57,.7)}.hover\:bg-sky-500:hover{--tw-bg-opacity:1;background-color:rgb(14 165 233/var(--tw-bg-opacity,1))}.hover\:bg-slate-600:hover{--tw-bg-opacity:1;background-color:rgb(71 85 105/var(--tw-bg-opacity,1))}.hover\:bg-slate-700:hover{--tw-bg-opacity:1;background-color:rgb(51 65 85/var(--tw-bg-opacity,1))}.hover\:bg-slate-800:hover{--tw-bg-opacity:1;background-color:rgb(30 41 59/var(--tw-bg-opacity,1))}.hover\:bg-slate-800\/50:hover{background-color:rgba(30,41,59,.5)}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.focus\:border-sky-500:focus{--tw-border-opacity:1;border-color:rgb(14 165 233/var(--tw-border-opacity,1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}@media (min-width:640px){.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:p-6{padding:1.5rem}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-sm{font-size:.875rem;line-height:1.25rem}}@media (min-width:1024px){.lg\:h-full{height:100%}.lg\:w-\[380px\]{width:380px}.lg\:flex-row{flex-direction:row}.lg\:border-l{border-left-width:1px}.lg\:border-t-0{border-top-width:0}}</style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', 'Noto Sans JP', sans-serif;
+      overscroll-behavior: none;
+    }
+    /* 3Dビューだけ選択不可（URLなどの文字はコピーできるように） */
+    #canvas-container, .label-3d, .building-badge-3d {
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    #canvas-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      overflow: hidden;
+      touch-action: none;
+      background: radial-gradient(circle at 50% 40%, #1e293b 0%, #090d16 100%);
+    }
+    #canvas-container canvas {
+      touch-action: none;
+      display: block;
+      outline: none;
+    }
+    .label-3d {
+      position: absolute;
+      left: 0;
+      top: 0;
+      will-change: transform;
+      pointer-events: auto;
+      cursor: pointer;
+      white-space: nowrap;
+      z-index: 10;
+    }
+    .building-badge-3d {
+      position: absolute;
+      left: 0;
+      top: 0;
+      will-change: transform;
+      pointer-events: none;
+      white-space: nowrap;
+      z-index: 6;
+    }
+    .custom-scroll::-webkit-scrollbar { width: 5px; height: 5px; }
+    .custom-scroll::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.4); }
+    .custom-scroll::-webkit-scrollbar-thumb { background: rgba(148, 163, 184, 0.35); border-radius: 9999px; }
+
+    /* 表示モード切替：来訪者ビューでは管理用UIを隠す */
+    body[data-view="visitor"] .admin-only { display: none !important; }
+    body[data-view="admin"] .visitor-only { display: none !important; }
+  </style>
+</head>
+<body data-view="admin" class="bg-slate-950 text-slate-100 h-[100dvh] w-screen overflow-hidden flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-slate-900/95 border-b border-slate-800 px-3 py-1.5 flex flex-wrap items-center justify-between gap-1.5 z-30 shrink-0">
+    <div class="flex items-center gap-1.5 flex-wrap min-w-0">
+      <h1 class="text-xs sm:text-sm font-bold tracking-tight text-white">校内マップ案内</h1>
+      <span id="current-mode-badge" class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-sky-500/20 text-sky-300 border border-sky-500/30">通常校舎案内</span>
+      <span id="weather-status-badge" class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">晴天</span>
+    </div>
+
+    <div class="flex items-center gap-1.5 flex-wrap">
+      <button id="weather-toggle-btn" type="button" title="雨天にすると、第一産振棟3Fの連絡通路を通らない経路で案内します" class="px-2 py-1 rounded-md bg-slate-800 hover:bg-slate-700 border border-slate-700 text-[11px] font-medium text-sky-300 transition">
+        <span id="weather-btn-label">天候: ☀️ 晴天</span>
+      </button>
+
+      <button id="preview-visitor-btn" type="button" class="admin-only px-2.5 py-1 rounded-md bg-slate-800 hover:bg-slate-700 border border-slate-600 text-[11px] font-semibold text-slate-200 transition">
+        来訪者画面で確認
+      </button>
+      <button id="open-nfc-modal-btn" type="button" class="admin-only flex items-center gap-1 px-2.5 py-1 rounded-md bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] font-semibold shadow transition">
+        NFCタグURL発行・編集
+      </button>
+    </div>
+  </header>
+
+  <!-- 来訪者画面プレビュー中バナー -->
+  <div id="preview-banner" class="hidden bg-amber-500/15 border-b border-amber-400/40 px-3 py-1 items-center justify-between gap-2 z-20 shrink-0 text-[11px] text-amber-200">
+    <span>来訪者画面のプレビュー中です（NFCタグから開いた時と同じ表示）</span>
+    <button id="exit-preview-btn" type="button" class="px-2 py-0.5 rounded bg-amber-400 text-slate-950 font-bold">管理画面に戻る</button>
+  </div>
+
+  <!-- NFC Touch Simulation Bar（管理用） -->
+  <div class="admin-only bg-slate-900/80 border-b border-slate-800/80 px-3 py-1 flex items-center gap-1.5 overflow-x-auto custom-scroll z-20 shrink-0">
+    <div class="flex items-center gap-1 text-[11px] font-semibold text-amber-300 shrink-0">
+      <span class="inline-block w-2 h-2 rounded-full bg-amber-400"></span>
+      <span>NFCタッチ再現（現在地）：</span>
+    </div>
+    <div id="nfc-spot-buttons" class="flex items-center gap-1 shrink-0"></div>
+  </div>
+
+  <!-- Main Content Layout -->
+  <div class="flex-1 min-h-0 flex flex-col lg:flex-row overflow-hidden relative">
+
+    <!-- 3D Viewport Area -->
+    <div class="relative flex-1 h-[52dvh] lg:h-full min-h-[280px] overflow-hidden">
+      <div id="canvas-container">
+        <div id="labels-layer" class="absolute inset-0 pointer-events-none overflow-hidden"></div>
+      </div>
+
+      <!-- Toast -->
+      <div id="nfc-scan-banner" class="absolute top-2.5 left-1/2 -translate-x-1/2 z-30 bg-slate-900/95 backdrop-blur-md border border-amber-400/60 rounded-xl px-3 py-1.5 shadow-xl flex items-center gap-2 transition-all duration-300 max-w-[90vw] pointer-events-none opacity-0 -translate-y-2">
+        <span class="w-2 h-2 rounded-full bg-amber-400 shrink-0"></span>
+        <div id="nfc-banner-text" class="text-xs font-bold text-white truncate"></div>
+      </div>
+
+      <!-- Top-Right: Control Mode Switcher + Zoom/Turn Pad -->
+      <div class="absolute right-2.5 top-2.5 z-20 flex flex-col items-end gap-1.5">
+        <div class="admin-only bg-slate-900/95 backdrop-blur-md p-1 rounded-xl border border-slate-700/80 shadow-xl flex items-center gap-1 text-[11px]">
+          <button id="drag-mode-guided-btn" type="button" class="px-2 py-1 rounded-lg font-bold transition bg-emerald-500 text-slate-950" title="模型を回すように左右回転＋拡大縮小だけで操作できます">🎯 固定軸</button>
+          <button id="drag-mode-pan-btn" type="button" class="px-2 py-1 rounded-lg font-bold transition text-slate-300 hover:bg-slate-800" title="1本指で前後左右にスライド移動します">✋ スライド</button>
+          <button id="drag-mode-rotate-btn" type="button" class="px-2 py-1 rounded-lg font-bold transition text-slate-300 hover:bg-slate-800" title="上下左右に自由回転します">🔄 3D回転</button>
+        </div>
+
+        <div class="bg-slate-900/92 backdrop-blur-md p-1 rounded-xl border border-slate-700/80 shadow-xl flex flex-col gap-1">
+          <div class="flex items-center gap-1">
+            <button id="zoom-in-btn" type="button" class="w-9 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm flex items-center justify-center transition" title="拡大">＋</button>
+            <button id="zoom-out-btn" type="button" class="w-9 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm flex items-center justify-center transition" title="縮小">－</button>
+          </div>
+          <div class="flex items-center gap-1">
+            <button id="rotate-left-btn" type="button" class="w-9 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 text-sky-300 font-bold text-xs flex items-center justify-center transition" title="左へ回転">↺</button>
+            <button id="rotate-right-btn" type="button" class="w-9 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 text-sky-300 font-bold text-xs flex items-center justify-center transition" title="右へ回転">↻</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floor Controls -->
+      <div class="absolute left-2.5 top-2.5 z-20 flex flex-col gap-1 bg-slate-900/90 backdrop-blur-md p-1.5 rounded-xl border border-slate-700/80 shadow-xl">
+        <div class="text-[10px] font-semibold text-slate-400 text-center px-1">階数切替</div>
+        <button type="button" data-floor="all" class="floor-btn px-2 py-1 rounded-lg text-xs font-bold transition bg-sky-600 text-white">全階</button>
+        <button type="button" data-floor="4" class="floor-btn px-2 py-1 rounded-lg text-xs font-bold transition text-slate-300 hover:bg-slate-800">4F</button>
+        <button type="button" data-floor="3" class="floor-btn px-2 py-1 rounded-lg text-xs font-bold transition text-slate-300 hover:bg-slate-800">3F</button>
+        <button type="button" data-floor="2" class="floor-btn px-2 py-1 rounded-lg text-xs font-bold transition text-slate-300 hover:bg-slate-800">2F</button>
+        <button type="button" data-floor="1" class="floor-btn px-2 py-1 rounded-lg text-xs font-bold transition text-slate-300 hover:bg-slate-800">1F</button>
+        <div class="border-t border-slate-700/80 my-0.5"></div>
+        <button id="toggle-explode-btn" type="button" class="px-1.5 py-1 rounded-lg text-[10px] font-semibold bg-indigo-600/30 text-indigo-200 border border-indigo-500/40 hover:bg-indigo-600/50 transition">展開: ON</button>
+      </div>
+
+      <!-- Bottom Camera Angle Bar -->
+      <div class="absolute left-2.5 right-2.5 bottom-2.5 z-20 flex items-center justify-between gap-2 pointer-events-none">
+        <div class="pointer-events-auto flex items-center gap-1 overflow-x-auto custom-scroll bg-slate-900/95 backdrop-blur-md px-2 py-1 rounded-xl border border-slate-700/80 shadow-xl text-[11px]">
+          <button id="cam-front-btn" type="button" class="px-2.5 py-1 rounded-lg bg-sky-600 text-white font-bold shrink-0 transition">正面</button>
+          <button id="cam-reset-btn" type="button" class="px-2 py-1 rounded-lg hover:bg-slate-800 text-slate-200 font-medium shrink-0 transition">全体俯瞰</button>
+          <button id="cam-right-btn" type="button" class="px-2 py-1 rounded-lg hover:bg-slate-800 text-slate-200 font-medium shrink-0 transition">右斜め(体育館側)</button>
+          <button id="cam-left-btn" type="button" class="px-2 py-1 rounded-lg hover:bg-slate-800 text-slate-200 font-medium shrink-0 transition">左斜め(第2産振側)</button>
+          <button id="cam-back-btn" type="button" class="px-2 py-1 rounded-lg hover:bg-slate-800 text-slate-200 font-medium shrink-0 transition">裏(運動場側)</button>
+          <button id="cam-top-btn" type="button" class="px-2 py-1 rounded-lg hover:bg-slate-800 text-slate-200 font-medium shrink-0 transition">真上</button>
+          <button id="toggle-labels-btn" type="button" class="px-2 py-1 rounded-lg bg-slate-800 text-sky-300 font-medium shrink-0 transition">ラベル: 表示</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <aside id="sidebar" class="w-full lg:w-[380px] bg-slate-900 border-t lg:border-t-0 lg:border-l border-slate-800 flex flex-col h-[48dvh] lg:h-full z-20 shrink-0">
+
+      <div class="shrink-0 px-3 py-1.5 bg-slate-800/70 border-b border-slate-800 text-[12px] font-semibold text-amber-300 flex items-center gap-1.5">
+        <span class="inline-block w-2 h-2 rounded-full bg-amber-400 shrink-0"></span>
+        <span class="shrink-0">現在地：</span><strong id="current-spot-label" class="text-white truncate"></strong>
+      </div>
+
+      <div class="flex shrink-0 border-b border-slate-800 text-xs font-bold">
+        <button id="tab-route-btn" type="button" data-tab="route" class="side-tab flex-1 py-2.5 transition">🧭 ルート案内</button>
+        <button id="tab-find-btn" type="button" data-tab="find" class="side-tab flex-1 py-2.5 transition">🔍 行き先を探す</button>
+      </div>
+
+      <!-- ルート案内パネル -->
+      <section id="panel-route" class="flex-1 min-h-0 overflow-y-auto custom-scroll p-2.5 space-y-2">
+        <div class="flex items-center justify-end">
+          <span id="route-distance-badge" class="hidden text-[11px] bg-sky-500/20 text-sky-300 px-2 py-0.5 rounded-full font-semibold border border-sky-500/30"></span>
+        </div>
+
+        <div id="route-empty" class="rounded-xl border border-dashed border-slate-700 p-4 text-center space-y-2">
+          <div class="text-sm font-bold text-white">どこへ行きますか？</div>
+          <div class="text-[11px] text-slate-400">行き先を選ぶと、現在地からの道順を順番に表示します。</div>
+          <button id="go-find-btn" type="button" class="px-4 py-2 rounded-lg bg-sky-600 hover:bg-sky-500 text-white text-xs font-bold transition">行き先を探す</button>
+        </div>
+
+        <div id="route-body" class="hidden space-y-2">
+          <div class="bg-slate-800/60 rounded-xl p-2.5 border border-slate-700/80">
+            <div class="flex items-start justify-between gap-2">
+              <div class="min-w-0">
+                <div class="flex items-center gap-1 flex-wrap">
+                  <span id="dest-building-badge" class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-indigo-500/20 text-indigo-300 border border-indigo-500/30"></span>
+                  <span id="dest-floor-badge" class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30"></span>
+                </div>
+                <h2 id="dest-title" class="text-sm font-bold text-white mt-1"></h2>
+                <p id="dest-desc" class="text-[11px] text-slate-300 mt-0.5"></p>
+              </div>
+              <button id="focus-dest-btn" type="button" class="px-2 py-1 rounded-lg bg-slate-700 hover:bg-slate-600 text-white text-[11px] font-semibold shrink-0 transition">目的地を拡大</button>
+            </div>
+          </div>
+
+          <div id="route-notes" class="space-y-1"></div>
+          <ol id="route-steps-list" class="space-y-1"></ol>
+
+          <div class="sticky bottom-0 -mx-2.5 px-2.5 py-1.5 bg-slate-900/95 border-t border-slate-800 flex items-center gap-1.5">
+            <button id="step-prev-btn" type="button" class="flex-1 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-100 text-xs font-bold transition">◀ 前へ</button>
+            <button id="step-overview-btn" type="button" class="px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-sky-300 text-xs font-bold transition">全体</button>
+            <button id="step-next-btn" type="button" class="flex-1 py-2 rounded-lg bg-sky-600 hover:bg-sky-500 text-white text-xs font-bold transition">次へ ▶</button>
+          </div>
+          <button id="clear-dest-btn" type="button" class="w-full py-1.5 rounded-lg text-[11px] font-semibold text-slate-400 hover:text-white hover:bg-slate-800 transition">別の行き先を選ぶ</button>
+        </div>
+      </section>
+
+      <!-- 行き先を探すパネル -->
+      <section id="panel-find" class="hidden flex-1 min-h-0 flex flex-col">
+        <div class="p-2 border-b border-slate-800 space-y-1.5 shrink-0">
+          <div>
+            <div class="text-[10px] font-semibold text-slate-400 mb-1">よく行く場所</div>
+            <div id="popular-chips" class="flex flex-wrap gap-1"></div>
+          </div>
+
+          <div class="relative">
+            <input id="room-search-input" type="text" placeholder="部屋を検索（例：職員室、1-1、パソコン室、購買）" class="w-full bg-slate-950 border border-slate-700/80 rounded-lg pl-7 pr-2.5 py-1.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-sky-500" />
+            <svg class="w-3.5 h-3.5 text-slate-500 absolute left-2.5 top-2.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+            </svg>
+          </div>
+
+          <div class="flex items-center gap-1 overflow-x-auto custom-scroll pb-0.5">
+            <button type="button" data-bldg="all" class="bldg-btn px-2 py-0.5 rounded text-[11px] font-semibold bg-indigo-600 text-white shrink-0">全棟</button>
+            <button type="button" data-bldg="本館" class="bldg-btn px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-800 text-slate-300 hover:text-white shrink-0">本館(1〜3F)</button>
+            <button type="button" data-bldg="教室棟" class="bldg-btn px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-800 text-slate-300 hover:text-white shrink-0">教室棟(1〜4F)</button>
+            <button type="button" data-bldg="第一産振棟" class="bldg-btn px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-800 text-slate-300 hover:text-white shrink-0">第一産振棟(1〜3F)</button>
+            <button type="button" data-bldg="第2産振棟" class="bldg-btn px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-800 text-slate-300 hover:text-white shrink-0">第2産振棟(1〜4F)</button>
+            <button type="button" data-bldg="家庭科棟" class="bldg-btn px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-800 text-slate-300 hover:text-white shrink-0">家庭科棟(1〜3F)</button>
+            <button type="button" data-bldg="理科棟" class="bldg-btn px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-800 text-slate-300 hover:text-white shrink-0">理科棟(1〜3F)</button>
+            <button type="button" data-bldg="屋外・体育館" class="bldg-btn px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-800 text-slate-300 hover:text-white shrink-0">購買・体育館・運動場</button>
+          </div>
+
+          <div class="flex items-center gap-1 overflow-x-auto custom-scroll">
+            <button type="button" data-cat="all" class="cat-btn px-2 py-0.5 rounded text-[10px] font-semibold bg-sky-600 text-white shrink-0">すべて</button>
+            <button type="button" data-cat="special" class="cat-btn px-2 py-0.5 rounded text-[10px] font-semibold bg-slate-800 text-slate-300 hover:text-white shrink-0">特別教室</button>
+            <button type="button" data-cat="regular" class="cat-btn px-2 py-0.5 rounded text-[10px] font-semibold bg-slate-800 text-slate-300 hover:text-white shrink-0">普通教室</button>
+            <button type="button" data-cat="admin" class="cat-btn px-2 py-0.5 rounded text-[10px] font-semibold bg-slate-800 text-slate-300 hover:text-white shrink-0">職員・管理</button>
+            <button type="button" data-cat="facility" class="cat-btn px-2 py-0.5 rounded text-[10px] font-semibold bg-slate-800 text-slate-300 hover:text-white shrink-0">体育館・設備</button>
+          </div>
+        </div>
+
+        <div id="room-list-container" class="flex-1 overflow-y-auto custom-scroll p-2 space-y-1"></div>
+      </section>
+    </aside>
+  </div>
+
+  <!-- Modal（管理用）: NFC URL発行 / 部屋編集 / バックアップ -->
+  <div id="nfc-modal" class="admin-only fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden items-center justify-center p-3 sm:p-6">
+    <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-2xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
+      <div class="px-5 py-3.5 border-b border-slate-800 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+          <h3 class="text-sm sm:text-base font-bold text-white">NFCタグURL発行 ＆ マップ編集</h3>
+        </div>
+        <button id="close-nfc-modal-btn" type="button" class="text-slate-400 hover:text-white p-1 rounded-lg">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
+      </div>
+
+      <div class="p-5 overflow-y-auto custom-scroll space-y-5 text-xs sm:text-sm">
+
+        <!-- 1. URL発行 -->
+        <div class="bg-slate-800/60 border border-slate-700/80 rounded-xl p-4 space-y-3">
+          <div class="font-bold text-white flex items-center justify-between flex-wrap gap-1">
+            <span>1. NFCタグに書き込むURL</span>
+            <span class="text-[11px] font-normal text-sky-300">「NFC Tools」の「URL/URI」に登録</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            <div>
+              <label for="modal-spot-select" class="block text-[11px] text-slate-400 mb-1">タグを貼る場所（現在地）</label>
+              <select id="modal-spot-select" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-2 text-xs text-white"></select>
+            </div>
+            <div>
+              <label for="modal-dest-select" class="block text-[11px] text-slate-400 mb-1">最初から表示する目的地（通常は「指定なし」）</label>
+              <select id="modal-dest-select" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-2 text-xs text-white"></select>
+            </div>
+          </div>
+
+          <div>
+            <label for="modal-base-url" class="block text-[11px] text-slate-400 mb-1">このページを公開するURL（https推奨・短いほどタグ容量に余裕あり）</label>
+            <input id="modal-base-url" type="text" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200 font-mono" />
+          </div>
+
+          <label class="flex items-center gap-2 text-[11px] text-slate-300">
+            <input id="modal-festival-chk" type="checkbox" class="rounded" />
+            URLに mode=festival を含める（文化祭専用タグにする場合のみ。通常は外す）
+          </label>
+
+          <div class="bg-slate-950 border border-emerald-500/40 rounded-lg p-2.5 flex items-center justify-between gap-2">
+            <code id="generated-nfc-url" class="text-xs text-emerald-300 font-mono break-all"></code>
+            <button id="copy-nfc-url-btn" type="button" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold shrink-0 transition">URLをコピー</button>
+          </div>
+
+          <div class="bg-slate-900/90 rounded-lg p-3 border border-slate-800 space-y-2">
+            <div class="flex items-center justify-between text-xs">
+              <span class="text-slate-300 font-medium">書き込みサイズ：<strong id="ndef-byte-count" class="text-white">62</strong> バイト</span>
+              <span id="ntag-status-label" class="text-emerald-400 font-semibold"></span>
+            </div>
+            <div class="grid grid-cols-3 gap-2 text-[11px]">
+              <div class="p-2 rounded border border-slate-700 bg-slate-950"><div class="font-bold text-slate-200">NTAG213 (144B)</div><div id="chip-fit-213" class="text-emerald-400 font-semibold mt-0.5">OK</div></div>
+              <div class="p-2 rounded border border-sky-500/40 bg-sky-950/20"><div class="font-bold text-sky-300">NTAG215 (504B)</div><div id="chip-fit-215" class="text-emerald-400 font-semibold mt-0.5">OK</div></div>
+              <div class="p-2 rounded border border-slate-700 bg-slate-950"><div class="font-bold text-slate-200">NTAG216 (888B)</div><div id="chip-fit-216" class="text-emerald-400 font-semibold mt-0.5">OK</div></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="text-[11px] text-slate-400 mb-1">全タグ分のURL一覧（目的地指定なし）</div>
+            <div id="all-tag-urls" class="space-y-1"></div>
+          </div>
+        </div>
+
+        <!-- 2. 部屋編集 -->
+        <div class="bg-slate-800/60 border border-slate-700/80 rounded-xl p-4 space-y-3">
+          <div class="font-bold text-white">2. 部屋の名称・案内文・位置を編集</div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            <div>
+              <label for="edit-room-select" class="block text-[11px] text-slate-400 mb-1">編集する部屋</label>
+              <select id="edit-room-select" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-2 text-xs text-white"></select>
+            </div>
+            <div>
+              <label for="edit-room-name" class="block text-[11px] text-slate-400 mb-1">表示する部屋名（現在のモード分）</label>
+              <input id="edit-room-name" type="text" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-white" />
+            </div>
+          </div>
+          <div>
+            <label for="edit-room-desc" class="block text-[11px] text-slate-400 mb-1">案内テキスト</label>
+            <input id="edit-room-desc" type="text" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-white" />
+          </div>
+          <div class="grid grid-cols-4 gap-2">
+            <div><label for="edit-room-x" class="block text-[11px] text-slate-400 mb-1">X（東西）</label><input id="edit-room-x" type="number" step="0.1" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2 py-1.5 text-xs text-white" /></div>
+            <div><label for="edit-room-z" class="block text-[11px] text-slate-400 mb-1">Z（南北）</label><input id="edit-room-z" type="number" step="0.1" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2 py-1.5 text-xs text-white" /></div>
+            <div><label for="edit-room-w" class="block text-[11px] text-slate-400 mb-1">幅 W</label><input id="edit-room-w" type="number" step="0.1" min="0.5" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2 py-1.5 text-xs text-white" /></div>
+            <div><label for="edit-room-d" class="block text-[11px] text-slate-400 mb-1">奥行 D</label><input id="edit-room-d" type="number" step="0.1" min="0.5" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2 py-1.5 text-xs text-white" /></div>
+          </div>
+          <div class="flex items-center justify-end gap-2">
+            <span id="save-room-feedback" class="text-xs text-emerald-400 hidden">3Dマップに反映しました！</span>
+            <button id="save-room-edit-btn" type="button" class="px-4 py-1.5 rounded-lg bg-sky-600 hover:bg-sky-500 text-white text-xs font-semibold transition">この内容で3Dマップを更新</button>
+          </div>
+        </div>
+
+        <!-- 3. バックアップ -->
+        <div class="bg-slate-800/60 border border-slate-700/80 rounded-xl p-4 space-y-2">
+          <div class="font-bold text-white">3. 編集内容のバックアップ（書き出し／読み込み）</div>
+          <p class="text-[11px] text-slate-400">編集内容はこの端末のブラウザにだけ自動保存されます。来訪者のスマホにも反映するには、書き出したJSONをHTMLに取り込んで公開し直してください。</p>
+          <textarea id="overrides-json" rows="4" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-[11px] text-slate-200 font-mono" placeholder="ここに書き出し結果が表示されます／読み込むJSONを貼り付け"></textarea>
+          <div class="flex items-center gap-2 flex-wrap">
+            <button id="export-overrides-btn" type="button" class="px-3 py-1.5 rounded-lg bg-slate-700 hover:bg-slate-600 text-white text-xs font-semibold transition">書き出し（コピー）</button>
+            <button id="import-overrides-btn" type="button" class="px-3 py-1.5 rounded-lg bg-slate-700 hover:bg-slate-600 text-white text-xs font-semibold transition">読み込み</button>
+            <button id="reset-overrides-btn" type="button" class="px-3 py-1.5 rounded-lg bg-rose-900/60 hover:bg-rose-800/70 text-rose-200 text-xs font-semibold transition">この端末の編集を初期化</button>
+            <span id="overrides-feedback" class="text-xs text-emerald-400"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // =========================================================================
+    // 1. Campus Layout Data
+    //    Front View (正面) = Looking from East (+X) toward West (-X), matching screenshot!
+    //    - Foreground Center: 本館 (x: +13.5, z: -6.5)
+    //    - Foreground Left: 第2産振棟 (x: +13.5, z: +11.5) & 購買 (x: +6.8, z: +6.8)
+    //    - Foreground Right: 体育館 (x: +23.0, z: -14.5)
+    //    - Middle: 教室棟 (x: 0, z: -16 to +16)
+    //    - Background: グラウンド (left-back) & 第一産振棟 (right-back)
+    // =========================================================================
+    const NFC_SPOTS = [
+      {
+        id: 'honkan_office',
+        name: '本館1F 事務室（本館1F真ん中）',
+        shortName: '本館1F 事務室',
+        building: '本館',
+        floor: 1,
+        x: 13.5,
+        z: 3.9
+      },
+      {
+        id: 'kyoshitsu_central',
+        name: '教室棟1F 中央出入口',
+        shortName: '教室棟1F 中央口',
+        building: '教室棟',
+        floor: 1,
+        x: 0,
+        z: -1.6
+      },
+      {
+        id: 'kyoshitsu_shokou',
+        name: '教室棟1F 昇降口（アピタ側）',
+        shortName: '教室棟1F 昇降口',
+        building: '教室棟',
+        floor: 1,
+        x: 0,
+        z: 16.0
+      },
+      {
+        id: 'sanshin1_1f',
+        name: '第一産振棟1F 入口',
+        shortName: '第一産振1F',
+        building: '第一産振棟',
+        floor: 1,
+        x: -10.0,
+        z: -14.0
+      },
+      {
+        id: 'sanshin2_1f',
+        name: '第2産振棟1F 入口',
+        shortName: '第2産振1F',
+        building: '第2産振棟',
+        floor: 1,
+        x: 13.5,
+        z: 16.0
+      },
+      {
+        id: 'koubai_front',
+        name: '購買（外の売店小屋）前',
+        shortName: '購買前',
+        building: '屋外・体育館',
+        floor: 1,
+        x: 8.8,
+        z: 17.0
+      },
+      {
+        id: 'gym_entrance',
+        name: '体育館 屋外入口',
+        shortName: '体育館入口',
+        building: '屋外・体育館',
+        floor: 1,
+        x: 20.5,
+        z: -10.0
+      }
+    ];
+
+    const ROOMS = [
+      // --- 本館 (1F〜3F) ---
+      {
+        id: 'honkan_principal',
+        building: '本館',
+        floor: 1,
+        category: 'admin',
+        shortLabel: '校長室',
+        name: '校長室',
+        festivalName: '校長室（来賓控室）',
+        desc: '本館1Fの校長室。事務室の隣にあります。',
+        festivalDesc: '来賓および学校関係者用の控室です。',
+        x: 13.5, z: 0.4, w: 5.2, d: 3.5, color: 0x10b981
+      },
+      {
+        id: 'honkan_office',
+        building: '本館',
+        floor: 1,
+        category: 'admin',
+        shortLabel: '事務室',
+        name: '事務室',
+        festivalName: '事務室・総合案内',
+        desc: '本館1Fの真ん中にある事務室です。',
+        festivalDesc: '本館1F中央の総合案内窓口です。',
+        x: 13.5, z: -6.6, w: 5.2, d: 4.6, color: 0x059669
+      },
+      {
+        id: 'honkan_meeting_b',
+        building: '本館',
+        floor: 1,
+        category: 'admin',
+        shortLabel: '会議室B',
+        name: '会議室B',
+        festivalName: '会議室B（休憩室）',
+        desc: '本館1Fの会議室B（隣に1Fトイレ・階段あり）。',
+        festivalDesc: '保護者・来校者向けの休憩スペースです。',
+        x: 13.5, z: 7.4, w: 5.2, d: 3.5, color: 0x10b981
+      },
+      {
+        id: 'honkan_wc_1f',
+        building: '本館',
+        floor: 1,
+        category: 'facility',
+        shortLabel: 'トイレ',
+        name: '本館1F トイレ・階段',
+        festivalName: '本館1F トイレ・階段',
+        desc: '本館1F端のトイレおよび階段。',
+        festivalDesc: '本館1Fのトイレ・階段です。',
+        x: 13.5, z: 13.725, w: 5.2, d: 2.15, color: 0x64748b
+      },
+      {
+        id: 'honkan_staff',
+        building: '本館',
+        floor: 2,
+        category: 'admin',
+        shortLabel: '職員室',
+        name: '職員室',
+        festivalName: '職員室（運営本部）',
+        desc: '本館2Fの職員室。2F渡り廊下で教室棟2Fと直結しています。',
+        festivalDesc: '先生方の控室および行事本部です（教室棟2Fへ渡り廊下あり）。',
+        x: 13.5, z: 2.85, w: 5.2, d: 8.4, color: 0x10b981
+      },
+      {
+        id: 'honkan_meeting_a',
+        building: '本館',
+        floor: 2,
+        category: 'admin',
+        shortLabel: '会議室A',
+        name: '会議室A（＋2Fトイレ）',
+        festivalName: '会議室A（進路・学校相談室）',
+        desc: '本館2Fの会議室Aおよび2Fトイレ・階段。',
+        festivalDesc: '個別相談および学校紹介パネル展示室です。',
+        x: 13.5, z: 9.85, w: 5.2, d: 5.6, color: 0x10b981
+      },
+      {
+        id: 'honkan_wc_2f',
+        building: '本館',
+        floor: 2,
+        category: 'facility',
+        shortLabel: '2Fトイレ',
+        name: '本館2F トイレ・階段',
+        festivalName: '本館2F トイレ・階段',
+        desc: '本館2Fのトイレおよび階段。',
+        festivalDesc: '本館2Fのトイレ・階段です。',
+        x: 13.5, z: 13.725, w: 5.2, d: 2.15, color: 0x64748b
+      },
+      {
+        id: 'honkan_library',
+        building: '本館',
+        floor: 3,
+        category: 'special',
+        shortLabel: '図書室',
+        name: '図書室（本館3F）',
+        festivalName: '図書室「古本市＆読書展」',
+        desc: '本館3Fの図書室。3F渡り廊下で教室棟3Fと直結しています。',
+        festivalDesc: '本館3F図書室。教室棟3Fからも渡り廊下で直接入れます。',
+        x: 13.5, z: 1.55, w: 5.2, d: 5.8, color: 0xa855f7
+      },
+
+      // --- 第2産振棟 (1F〜4F) ---
+      {
+        id: 'sanshin2_wc_1f',
+        building: '第2産振棟',
+        floor: 1,
+        category: 'facility',
+        shortLabel: '1Fトイレ',
+        name: '第2産振棟1F トイレ・階段',
+        festivalName: '第2産振棟1F トイレ・階段',
+        desc: '第2産振棟1Fのトイレと階段。',
+        festivalDesc: '第2産振棟1Fのトイレ・階段です。',
+        x: 13.5, z: 16.25, w: 5.2, d: 1.5, color: 0x64748b
+      },
+      {
+        id: 'sanshin2_business',
+        building: '第2産振棟',
+        floor: 1,
+        category: 'special',
+        shortLabel: 'ビジネス実践室',
+        name: 'ビジネス実践室',
+        festivalName: 'ビジネス実践室「商業科ショップ」',
+        desc: '第2産振棟1Fのビジネス実践室。',
+        festivalDesc: '商業科による企画商品販売・展示を行うビジネス実践室です。',
+        x: 13.5, z: 20.25, w: 5.2, d: 6.5, color: 0xa855f7
+      },
+      {
+        id: 'sanshin2_pc1',
+        building: '第2産振棟',
+        floor: 3,
+        category: 'special',
+        shortLabel: 'パソコン室1',
+        name: 'パソコン室1',
+        festivalName: 'パソコン室1「タイピング大会」',
+        desc: '第2産振棟2Fのパソコン室1。',
+        festivalDesc: '誰でも参加できるタイピング大会会場です。',
+        x: 13.5, z: 18.25, w: 5.2, d: 3.5, color: 0xa855f7
+      },
+      {
+        id: 'sanshin2_pc2',
+        building: '第2産振棟',
+        floor: 3,
+        category: 'special',
+        shortLabel: 'パソコン室2',
+        name: 'パソコン室2',
+        festivalName: 'パソコン室2「デジタル作品展」',
+        desc: '第2産振棟2Fのパソコン室2。',
+        festivalDesc: 'デジタルイラスト・デザイン作品の展示会場です。',
+        x: 13.5, z: 21.75, w: 5.2, d: 3.5, color: 0xa855f7
+      },
+      {
+        id: 'sanshin2_wp1',
+        building: '第2産振棟',
+        floor: 2,
+        category: 'special',
+        shortLabel: 'ワープロ室1',
+        name: 'ワープロ室1',
+        festivalName: 'ワープロ室1「高速入力実演」',
+        desc: '第2産振棟3Fのワープロ室1。',
+        festivalDesc: 'ワープロ部による高速入力実演・体験コーナーです。',
+        x: 13.5, z: 18.25, w: 5.2, d: 3.5, color: 0xa855f7
+      },
+      {
+        id: 'sanshin2_wp2',
+        building: '第2産振棟',
+        floor: 2,
+        category: 'special',
+        shortLabel: 'ワープロ室2',
+        name: 'ワープロ室2',
+        festivalName: 'ワープロ室2「PCクイズ大会」',
+        desc: '第2産振棟3Fのワープロ室2。',
+        festivalDesc: 'PCを使ったクイズ＆パズル体験会場です。',
+        x: 13.5, z: 21.75, w: 5.2, d: 3.5, color: 0xa855f7
+      },
+      {
+        id: 'sanshin2_comm',
+        building: '第2産振棟',
+        floor: 4,
+        category: 'special',
+        shortLabel: 'コミュ室',
+        name: 'コミュニケーションルーム',
+        festivalName: 'コミュニケーションルーム「国際交流」',
+        desc: '第2産振棟4Fのコミュニケーションルーム。',
+        festivalDesc: '世界の文化紹介と英語ゲームが楽しめる交流スペースです。',
+        x: 13.5, z: 18.25, w: 5.2, d: 3.5, color: 0xa855f7
+      },
+      {
+        id: 'sanshin2_lang',
+        building: '第2産振棟',
+        floor: 4,
+        category: 'special',
+        shortLabel: '語学実習室',
+        name: '語学実習室',
+        festivalName: '語学実習室「洋画＆スピーチ展」',
+        desc: '第2産振棟4Fの語学実習室。',
+        festivalDesc: '語学選択者による展示とショートムービー上映室です。',
+        x: 13.5, z: 21.75, w: 5.2, d: 3.5, color: 0xa855f7
+      },
+
+      // --- 第一産振棟 (1F〜3F) ---
+      {
+        id: 'sanshin1_wc_1f',
+        building: '第一産振棟',
+        floor: 1,
+        category: 'facility',
+        shortLabel: '1F階段・WC',
+        name: '第一産振棟1F 階段・WC・準備室',
+        festivalName: '第一産振棟1F 階段・WC',
+        desc: '教室棟1F通路から入ってすぐの階段・トイレ・準備室。',
+        festivalDesc: '第一産振棟1Fの階段・トイレです。',
+        x: -10.5, z: -14.0, w: 4.0, d: 4.6, color: 0x64748b
+      },
+      {
+        id: 'multimedia_1',
+        building: '第一産振棟',
+        floor: 1,
+        category: 'special',
+        shortLabel: 'マルチメディアI',
+        name: 'マルチメディア室I',
+        festivalName: 'マルチメディア室I「映像上映」',
+        desc: '第一産振棟1F中央のマルチメディア室I。',
+        festivalDesc: '生徒制作の映像・アニメーション上映ブースです。',
+        x: -15.8, z: -14.0, w: 5.2, d: 4.6, color: 0xa855f7
+      },
+      {
+        id: 'multimedia_2',
+        building: '第一産振棟',
+        floor: 1,
+        category: 'special',
+        shortLabel: 'マルチメディアII',
+        name: 'マルチメディア室II',
+        festivalName: 'マルチメディア室II「eスポーツ体験」',
+        desc: '第一産振棟1F奥のマルチメディア室II。',
+        festivalDesc: '大型モニターでのゲーム・デジタル体験会場です。',
+        x: -21.8, z: -14.0, w: 5.6, d: 4.6, color: 0xa855f7
+      },
+      {
+        id: 'sanshin1_wc_2f',
+        building: '第一産振棟',
+        floor: 2,
+        category: 'facility',
+        shortLabel: '2F階段・WC',
+        name: '第一産振棟2F 階段・WC・準備室',
+        festivalName: '第一産振棟2F 階段・WC',
+        desc: '教室棟2F連絡通路からつながる階段・トイレ・準備室。',
+        festivalDesc: '第一産振棟2Fの階段・トイレです。',
+        x: -10.5, z: -14.0, w: 4.0, d: 4.6, color: 0x64748b
+      },
+      {
+        id: 'cg_lab',
+        building: '第一産振棟',
+        floor: 2,
+        category: 'special',
+        shortLabel: 'CG実習室',
+        name: 'CG実習室',
+        festivalName: 'CG実習室「3DCG・VR体験」',
+        desc: '第一産振棟2F中央のCG実習室。',
+        festivalDesc: '3DCGモデリング体験とデジタルアート展示室です。',
+        x: -15.8, z: -14.0, w: 5.2, d: 4.6, color: 0xa855f7
+      },
+      {
+        id: 'presentation_room',
+        building: '第一産振棟',
+        floor: 2,
+        category: 'special',
+        shortLabel: 'プレゼン室',
+        name: 'プレゼンテーションルーム',
+        festivalName: 'プレゼンテーションルーム「研究発表」',
+        desc: '第一産振棟2F奥のプレゼンテーションルーム。',
+        festivalDesc: '課題研究および地域連携プロジェクトの発表会場です。',
+        x: -21.8, z: -14.0, w: 5.6, d: 4.6, color: 0xa855f7
+      },
+      {
+        id: 'sanshin1_wc_3f',
+        building: '第一産振棟',
+        floor: 3,
+        category: 'facility',
+        shortLabel: '3F階段・WC',
+        name: '第一産振棟3F 階段・WC',
+        festivalName: '第一産振棟3F 階段・WC',
+        desc: '第一産振棟3Fの階段・トイレ（教室棟3Fとの連絡通路は雨天通行止め）。',
+        festivalDesc: '第一産振棟3F階段・トイレ（雨天時は2F通路をご利用ください）。',
+        x: -10.0, z: -14.0, w: 3.2, d: 4.6, color: 0x64748b
+      },
+      {
+        id: 'info_lecture',
+        building: '第一産振棟',
+        floor: 3,
+        category: 'special',
+        shortLabel: '情報講義・サーバ',
+        name: '情報講義室・サーバ室・準備室',
+        festivalName: '情報講義室「AI・情報展示」',
+        desc: '第一産振棟3Fの情報講義室およびサーバ室・準備室。',
+        festivalDesc: 'ネットワークやAI活用デモの展示室です。',
+        x: -15.2, z: -14.0, w: 6.0, d: 4.6, color: 0xa855f7
+      },
+      {
+        id: 'programming_lab',
+        building: '第一産振棟',
+        floor: 3,
+        category: 'special',
+        shortLabel: 'プログラミング室',
+        name: 'プログラミング実習室',
+        festivalName: 'プログラミング実習室「自作ゲーム体験」',
+        desc: '第一産振棟3F奥のプログラミング実習室。',
+        festivalDesc: '生徒が開発したゲームやアプリを遊べる体験会場です。',
+        x: -21.6, z: -14.0, w: 5.6, d: 4.6, color: 0xa855f7
+      },
+
+      {
+        id: 'honkan_hoken',
+        building: '本館',
+        floor: 1,
+        category: 'admin',
+        shortLabel: '保健室',
+        name: '保健室',
+        festivalName: '保健室（救護所）',
+        desc: '本館1F、会議室Bの隣（南側）の保健室。',
+        festivalDesc: '保健室（救護所）です。',
+        x: 13.5, z: 10.9, w: 5.2, d: 3.5, color: 0xef4444
+      },
+      // --- 教室棟 1F ---
+      {
+        id: 'janitor_room',
+        building: '教室棟',
+        floor: 1,
+        category: 'admin',
+        shortLabel: '放送室',
+        name: '放送室',
+        festivalName: '放送室',
+        desc: '教室棟1Fの放送室。',
+        festivalDesc: '放送室です。',
+        x: 0, z: -10.675, w: 5.4, d: 1.75, color: 0x10b981
+      },
+      {
+        id: 'janitor_office',
+        building: '教室棟',
+        floor: 1,
+        category: 'admin',
+        shortLabel: '用務員室',
+        name: '用務員室',
+        festivalName: '用務員室',
+        desc: '教室棟1F北端の用務員室（キャリアサポート室の真下）。',
+        festivalDesc: '用務員室です。',
+        x: 0, z: -16.45, w: 5.4, d: 3.3, color: 0x10b981
+      },
+      {
+        id: 'central_entrance',
+        building: '教室棟',
+        floor: 1,
+        category: 'facility',
+        shortLabel: '中央出入口・階段',
+        name: '教室棟1F 中央出入口・階段・WC',
+        festivalName: '中央入口（赤矢印）・出口（青矢印）',
+        desc: '正門側からのメイン出入口および中央階段・トイレ。本館1Fへの渡り廊下も隣接。',
+        festivalDesc: '案内図のメイン入口（赤矢印）・出口（青矢印）です。',
+        x: 0, z: -1.96, w: 5.4, d: 1.58, color: 0x0ea5e9
+      },
+      {
+        id: 'student_support',
+        building: '教室棟',
+        floor: 1,
+        category: 'admin',
+        shortLabel: '生徒サポート室',
+        name: '生徒サポート室（学習室1・生徒指導室・生徒会室）',
+        festivalName: '生徒サポート室（入場待機列）',
+        desc: '教室棟1F中央階段隣の生徒サポート室。',
+        festivalDesc: '入場待機列が設けられるサポート室エリアです。',
+        x: 0, z: 0.6, w: 5.4, d: 3.54, color: 0x10b981
+      },
+      {
+        id: 'study_room_2',
+        building: '教室棟',
+        floor: 1,
+        category: 'special',
+        shortLabel: '学習室2',
+        name: '学習室2',
+        festivalName: '学習室2「図書部 企画展示」',
+        desc: '教室棟1Fの学習室2。',
+        festivalDesc: '図書部による部誌配布・企画展示室です。',
+        x: 0, z: 4.135, w: 5.4, d: 3.53, color: 0xa855f7
+      },
+      {
+        id: 'stair_left_1f',
+        building: '教室棟',
+        floor: 1,
+        category: 'facility',
+        shortLabel: '購買側出入口・階段',
+        name: '購買側出入口・左階段',
+        festivalName: '購買側出入口・階段',
+        desc: '本館との渡り廊下（購買のところ）の着地点にある出入口と左手の階段。',
+        festivalDesc: '本館への渡り廊下と階段です。',
+        x: 0, z: 13.79, w: 5.4, d: 1.62, color: 0x0ea5e9
+      },
+      {
+        id: 'study_room_3',
+        building: '教室棟',
+        floor: 1,
+        category: 'special',
+        shortLabel: '学習室3',
+        name: '学習室3',
+        festivalName: '学習室3「英語部 イングリッシュカフェ」',
+        desc: '教室棟1Fの学習室3。',
+        festivalDesc: '英語部による英語ゲーム＆カルチャー展示室です。',
+        x: 0, z: 7.675, w: 5.4, d: 3.55, color: 0xa855f7
+      },
+      {
+        id: 'shokou_guchi',
+        building: '教室棟',
+        floor: 1,
+        category: 'facility',
+        shortLabel: '昇降口(アピタ側)',
+        name: '昇降口・南階段・WC（アピタ側）',
+        festivalName: '生徒昇降口・スリッパ履き替え所',
+        desc: '教室棟1F南端（アピタ側）の生徒昇降口および南階段・トイレ。',
+        festivalDesc: 'アピタ側の昇降口です。',
+        x: 0, z: 16.35, w: 5.4, d: 3.5, color: 0x0ea5e9
+      },
+
+      // --- 教室棟 2F ---
+      {
+        id: 'study_room_4',
+        building: '教室棟',
+        floor: 2,
+        category: 'special',
+        shortLabel: '学習室4・2F通路',
+        name: '学習室4',
+        festivalName: '学習室4（展示・休憩室）',
+        desc: '教室棟2F北側の学習室4。隣の廊下から第一産振棟2Fへ渡れます。',
+        festivalDesc: '学習室4展示室です（隣の廊下から第一産振棟2Fへ渡れます）。',
+        x: 0, z: -10.675, w: 5.4, d: 1.75, color: 0xa855f7
+      },
+      {
+        id: 'study_room_5',
+        building: '教室棟',
+        floor: 2,
+        category: 'special',
+        shortLabel: '学習室5',
+        name: '学習室5＋南階段・WC',
+        festivalName: '学習室5「茶道部 お茶席」',
+        desc: '教室棟2F南端（アピタ側）の学習室5。',
+        festivalDesc: '茶道部によるお抹茶とお菓子の呈茶コーナーです。',
+        x: 0, z: 16.35, w: 5.4, d: 3.5, color: 0xa855f7
+      },
+
+      // --- 教室棟 3F ---
+      {
+        id: 'study_room_6',
+        building: '教室棟',
+        floor: 3,
+        category: 'special',
+        shortLabel: '学習室6',
+        name: '学習室6',
+        festivalName: '学習室6',
+        desc: '教室棟3F北端の学習室6。',
+        festivalDesc: '学習室6です。',
+        x: -1.35, z: -16.45, w: 2.7, d: 3.3, color: 0xa855f7
+      },
+      {
+        id: 'study_room_7',
+        building: '教室棟',
+        floor: 3,
+        category: 'special',
+        shortLabel: '学習室7',
+        name: '学習室7・3F通路',
+        festivalName: '学習室7「インターアクト部展示」',
+        desc: '教室棟3F北側の学習室7。第一産振棟3Fへの連絡通路（雨天通行止）が隣接。',
+        festivalDesc: 'インターアクト部の活動展示室です。',
+        x: 0, z: -11.575, w: 5.4, d: 3.55, color: 0xa855f7
+      },
+
+      // --- 教室棟 4F ---
+      {
+        id: 'av_room',
+        building: '教室棟',
+        floor: 4,
+        category: 'special',
+        shortLabel: '視聴覚室',
+        name: '視聴覚室（＋準備室）',
+        festivalName: '視聴覚室「映画＆ステージ発表」',
+        desc: '教室棟4F北端（向山保育園側）の視聴覚室および準備室。',
+        festivalDesc: '大型スクリーンでの映画上映・有志発表会場です。',
+        x: 0, z: -14.825, w: 5.4, d: 6.55, color: 0xa855f7
+      },
+      {
+        id: 'study_room_9',
+        building: '教室棟',
+        floor: 4,
+        category: 'special',
+        shortLabel: '学習室9',
+        name: '学習室9＋南階段・WC',
+        festivalName: '学習室9「簿記部 企画展示」',
+        desc: '教室棟4F南端（アピタ側）の学習室9。',
+        festivalDesc: '簿記部による電卓実演・体験コーナーです。',
+        x: 0, z: 16.35, w: 5.4, d: 3.5, color: 0xa855f7
+      },
+
+      // --- 教室棟 北端（キャリアサポート室・旧生徒会室） ---
+      {
+        id: 'career_support',
+        building: '教室棟',
+        floor: 2,
+        category: 'special',
+        shortLabel: 'キャリアサポート室',
+        name: 'キャリアサポート室',
+        festivalName: 'キャリアサポート室「進路相談・展示」',
+        desc: '教室棟2F北端（一番右隅）のキャリアサポート室。第一産振棟への通路の隣にあります。',
+        festivalDesc: '進路相談と先輩の進路展示コーナーです。',
+        x: 0, z: -16.45, w: 5.4, d: 3.3, color: 0xa855f7
+      },
+      {
+        id: 'old_council',
+        building: '教室棟',
+        floor: 3,
+        category: 'special',
+        shortLabel: '生徒会準備室',
+        name: '生徒会準備室（旧生徒会室）',
+        festivalName: '旧生徒会室（展示）',
+        desc: '教室棟3F北端の旧生徒会室（キャリアサポート室の真上）。',
+        festivalDesc: '活動展示室です。',
+        x: 1.35, z: -16.45, w: 2.7, d: 3.3, color: 0xa855f7
+      },
+      // --- 家庭科棟 (1〜3F)：第一産振棟の左手。2F・3Fは第一産振棟から渡り廊下、1Fは外から ---
+      {
+        id: 'katei_tea',
+        building: '家庭科棟',
+        floor: 1,
+        category: 'special',
+        shortLabel: '茶道室',
+        name: '茶道室',
+        festivalName: '茶道室「お茶席」',
+        desc: '家庭科棟1F、廊下の左手の茶道室。',
+        festivalDesc: '茶道室の呈茶コーナーです。',
+        x: -20.95, z: -22.0, w: 8.3, d: 4.6, color: 0xa855f7
+      },
+      {
+        id: 'katei_prep',
+        building: '家庭科棟',
+        floor: 1,
+        category: 'special',
+        shortLabel: '家庭準備室',
+        name: '家庭準備室',
+        festivalName: '家庭準備室',
+        desc: '家庭科棟1F、廊下の右手の家庭準備室。',
+        festivalDesc: '家庭準備室です。',
+        x: -13.4, z: -22.0, w: 3.6, d: 4.6, color: 0xa855f7
+      },
+      {
+        id: 'katei_room',
+        building: '家庭科棟',
+        floor: 1,
+        category: 'special',
+        shortLabel: '家庭科室',
+        name: '家庭科室',
+        festivalName: '家庭科室「調理体験」',
+        desc: '家庭科棟1F、廊下の右手奥の家庭科室。',
+        festivalDesc: '調理体験・試食コーナーです。',
+        x: -9.75, z: -22.0, w: 3.7, d: 4.6, color: 0xa855f7
+      },
+      {
+        id: 'katei_2f_left',
+        building: '家庭科棟',
+        floor: 2,
+        category: 'special',
+        shortLabel: '家庭経営室',
+        name: '家庭経営室',
+        festivalName: '家庭経営室',
+        desc: '家庭科棟2F、廊下の左手の家庭経営室。',
+        festivalDesc: '家庭経営室です。',
+        x: -20.95, z: -22.0, w: 8.3, d: 4.6, color: 0xa855f7
+      },
+      {
+        id: 'hifuku_prep',
+        building: '家庭科棟',
+        floor: 2,
+        category: 'special',
+        shortLabel: '被服準備室',
+        name: '被服準備室',
+        festivalName: '被服準備室',
+        desc: '家庭科棟2F、廊下の右手の被服準備室。',
+        festivalDesc: '被服準備室です。',
+        x: -13.4, z: -22.0, w: 3.6, d: 4.6, color: 0xa855f7
+      },
+      {
+        id: 'hifuku_room',
+        building: '家庭科棟',
+        floor: 2,
+        category: 'special',
+        shortLabel: '被服室',
+        name: '被服室',
+        festivalName: '被服室「作品展示」',
+        desc: '家庭科棟2F、廊下の右手奥の被服室。',
+        festivalDesc: '被服作品の展示室です。',
+        x: -9.75, z: -22.0, w: 3.7, d: 4.6, color: 0xa855f7
+      },
+      {
+        id: 'boki_room',
+        building: '家庭科棟',
+        floor: 3,
+        category: 'special',
+        shortLabel: '簿記室',
+        name: '簿記室',
+        festivalName: '簿記室「電卓体験」',
+        desc: '家庭科棟3F、廊下の左手の簿記室。',
+        festivalDesc: '電卓・簿記体験コーナーです。',
+        x: -20.95, z: -22.0, w: 8.3, d: 4.6, color: 0xa855f7
+      },
+      {
+        id: 'soudan_room',
+        building: '家庭科棟',
+        floor: 3,
+        category: 'admin',
+        shortLabel: '相談室',
+        name: '相談室',
+        festivalName: '相談室',
+        desc: '家庭科棟3F、廊下の右手の相談室。',
+        festivalDesc: '相談室です。',
+        x: -13.4, z: -22.0, w: 3.6, d: 4.6, color: 0x10b981
+      },
+      {
+        id: 'shodo_room',
+        building: '家庭科棟',
+        floor: 3,
+        category: 'special',
+        shortLabel: '書道室',
+        name: '書道室',
+        festivalName: '書道室「書道パフォーマンス」',
+        desc: '家庭科棟3F、廊下の右手奥の書道室。',
+        festivalDesc: '書道作品の展示室です。',
+        x: -9.75, z: -22.0, w: 3.7, d: 4.6, color: 0xa855f7
+      },
+      // --- 理科棟 (1〜3F)：家庭科棟の隣（短辺側）。渡り廊下なし、外から1F玄関へ（部屋割は後日） ---
+      {
+        id: 'rika_1f',
+        building: '理科棟',
+        floor: 1,
+        category: 'special',
+        shortLabel: '化学室',
+        name: '化学室',
+        festivalName: '化学室',
+        desc: '理科棟1Fの化学室。',
+        festivalDesc: '化学室です。',
+        x: -29.95, z: -22.0, w: 8.3, d: 4.6, color: 0xa855f7
+      },
+      {
+        id: 'rika_2f',
+        building: '理科棟',
+        floor: 2,
+        category: 'special',
+        shortLabel: '物理室',
+        name: '物理室',
+        festivalName: '物理室',
+        desc: '理科棟2Fの物理室。',
+        festivalDesc: '物理室です。',
+        x: -29.95, z: -22.0, w: 8.3, d: 4.6, color: 0xa855f7
+      },
+      {
+        id: 'rika_3f',
+        building: '理科棟',
+        floor: 3,
+        category: 'special',
+        shortLabel: '美術室',
+        name: '美術室',
+        festivalName: '美術室',
+        desc: '理科棟3Fの美術室。',
+        festivalDesc: '美術室です。',
+        x: -29.95, z: -22.0, w: 8.3, d: 4.6, color: 0xa855f7
+      },
+      // --- 武道場：理科棟の隣（外から） ---
+      {
+        id: 'budojo',
+        building: '屋外・体育館',
+        floor: 1,
+        category: 'facility',
+        shortLabel: '武道場',
+        name: '武道場',
+        festivalName: '武道場',
+        desc: '理科棟の隣（短辺側）にある武道場。外からのみアクセスできます。',
+        festivalDesc: '武道場の体験コーナーです。',
+        x: -51.2, z: -23.0, w: 15.0, d: 9.0, color: 0xf43f5e, isGym: true
+      },
+
+      // --- 屋外・別棟（購買・体育館・グラウンド） ---
+      {
+        id: 'koubai_hut',
+        building: '屋外・体育館',
+        floor: 1,
+        category: 'facility',
+        shortLabel: '購買(外の小屋)',
+        name: '購買（外の売店小屋）',
+        festivalName: '購買「パン＆ドリンク販売所」',
+        desc: '第2産振棟のトイレと教室棟昇降口（アピタ側）の間（外）にある小屋。',
+        festivalDesc: '外の購買小屋でのパン・ドリンク販売所です。',
+        x: 5.8, z: 17.0, w: 3.4, d: 3.4, color: 0xf59e0b, isHut: true
+      },
+      {
+        id: 'gymnasium',
+        building: '屋外・体育館',
+        floor: 1,
+        category: 'facility',
+        shortLabel: '体育館(外から移動)',
+        name: '体育館（＋更衣室・WC）※外からのみ',
+        festivalName: '体育館「メインステージ」※外からのみ',
+        desc: '校地北東側の体育館（更衣室・WC併設）。外からのみアクセス可能です。',
+        festivalDesc: 'メインステージ会場！一度外に出て屋外通路から移動します。',
+        x: 23.0, z: -14.5, w: 9.2, d: 11.0, color: 0xf43f5e, isGym: true
+      },
+      {
+        id: 'sports_ground',
+        building: '屋外・体育館',
+        floor: 1,
+        category: 'facility',
+        shortLabel: 'グラウンド',
+        name: 'グラウンド（運動場）',
+        festivalName: 'グラウンド「屋外模擬店エリア」',
+        desc: '教室棟の奥から武道場の手前まで、西側に広がるグラウンド。',
+        festivalDesc: '屋外イベント・模擬店エリアです。',
+        x: -34.2, z: 5.5, w: 49.0, d: 22.0, color: 0xd97706, isGround: true
+      },
+      {
+        id: 'tennis_court',
+        building: '屋外・体育館',
+        floor: 1,
+        category: 'facility',
+        shortLabel: 'テニスコート',
+        name: 'テニスコート',
+        festivalName: 'テニスコート',
+        desc: 'グラウンドと武道場の間にあるテニスコート。',
+        festivalDesc: 'テニスコートです。',
+        x: -34.5, z: -8.0, w: 17.0, d: 5.0, color: 0x16a34a, isGround: true
+      },
+      {
+        id: 'class_3_1',
+        building: '教室棟',
+        floor: 2,
+        category: 'regular',
+        shortLabel: '3-1',
+        name: '3-1 教室',
+        festivalName: '3-1 クラス企画展示',
+        desc: '教室棟2Fの3年1組教室。',
+        festivalDesc: '3-1 クラス企画展示です。',
+        x: 0, z: -8.05, w: 5.4, d: 3.5, color: 0x3b82f6
+      },
+      {
+        id: 'class_3_2',
+        building: '教室棟',
+        floor: 2,
+        category: 'regular',
+        shortLabel: '3-2',
+        name: '3-2 教室',
+        festivalName: '3-2 クラス企画展示',
+        desc: '教室棟2Fの3年2組教室。',
+        festivalDesc: '3-2 クラス企画展示です。',
+        x: 0, z: -4.525, w: 5.4, d: 3.55, color: 0x3b82f6
+      },
+      {
+        id: 'class_3_3',
+        building: '教室棟',
+        floor: 2,
+        category: 'regular',
+        shortLabel: '3-3',
+        name: '3-3 教室',
+        festivalName: '3-3 クラス企画展示',
+        desc: '教室棟2Fの3年3組教室。',
+        festivalDesc: '3-3 クラス企画展示です。',
+        x: 0, z: 0.6, w: 5.4, d: 3.54, color: 0x3b82f6
+      },
+      {
+        id: 'class_3_4',
+        building: '教室棟',
+        floor: 2,
+        category: 'regular',
+        shortLabel: '3-4',
+        name: '3-4 教室',
+        festivalName: '3-4 クラス企画展示',
+        desc: '教室棟2Fの3年4組教室。',
+        festivalDesc: '3-4 クラス企画展示です。',
+        x: 0, z: 4.135, w: 5.4, d: 3.53, color: 0x3b82f6
+      },
+      {
+        id: 'class_3_5',
+        building: '教室棟',
+        floor: 2,
+        category: 'regular',
+        shortLabel: '3-5',
+        name: '3-5 教室',
+        festivalName: '3-5 クラス企画展示',
+        desc: '教室棟2Fの3年5組教室。',
+        festivalDesc: '3-5 クラス企画展示です。',
+        x: 0, z: 7.675, w: 5.4, d: 3.55, color: 0x3b82f6
+      },
+      {
+        id: 'class_3_6',
+        building: '教室棟',
+        floor: 2,
+        category: 'regular',
+        shortLabel: '3-6',
+        name: '3-6 教室',
+        festivalName: '3-6 クラス企画展示',
+        desc: '教室棟2Fの3年6組教室。',
+        festivalDesc: '3-6 クラス企画展示です。',
+        x: 0, z: 11.215, w: 5.4, d: 3.53, color: 0x3b82f6
+      },
+      {
+        id: 'class_2_1',
+        building: '教室棟',
+        floor: 3,
+        category: 'regular',
+        shortLabel: '2-1',
+        name: '2-1 教室',
+        festivalName: '2-1 クラス企画展示',
+        desc: '教室棟3Fの2年1組教室。',
+        festivalDesc: '2-1 クラス企画展示です。',
+        x: 0, z: -8.05, w: 5.4, d: 3.5, color: 0x3b82f6
+      },
+      {
+        id: 'class_2_2',
+        building: '教室棟',
+        floor: 3,
+        category: 'regular',
+        shortLabel: '2-2',
+        name: '2-2 教室',
+        festivalName: '2-2 クラス企画展示',
+        desc: '教室棟3Fの2年2組教室。',
+        festivalDesc: '2-2 クラス企画展示です。',
+        x: 0, z: -4.525, w: 5.4, d: 3.55, color: 0x3b82f6
+      },
+      {
+        id: 'class_2_3',
+        building: '教室棟',
+        floor: 3,
+        category: 'regular',
+        shortLabel: '2-3',
+        name: '2-3 教室',
+        festivalName: '2-3 クラス企画展示',
+        desc: '教室棟3Fの2年3組教室。',
+        festivalDesc: '2-3 クラス企画展示です。',
+        x: 0, z: 0.6, w: 5.4, d: 3.54, color: 0x3b82f6
+      },
+      {
+        id: 'class_2_4',
+        building: '教室棟',
+        floor: 3,
+        category: 'regular',
+        shortLabel: '2-4',
+        name: '2-4 教室',
+        festivalName: '2-4 クラス企画展示',
+        desc: '教室棟3Fの2年4組教室。',
+        festivalDesc: '2-4 クラス企画展示です。',
+        x: 0, z: 4.135, w: 5.4, d: 3.53, color: 0x3b82f6
+      },
+      {
+        id: 'class_2_5',
+        building: '教室棟',
+        floor: 3,
+        category: 'regular',
+        shortLabel: '2-5',
+        name: '2-5 教室',
+        festivalName: '2-5 クラス企画展示',
+        desc: '教室棟3Fの2年5組教室。',
+        festivalDesc: '2-5 クラス企画展示です。',
+        x: 0, z: 7.675, w: 5.4, d: 3.55, color: 0x3b82f6
+      },
+      {
+        id: 'class_2_6',
+        building: '教室棟',
+        floor: 3,
+        category: 'regular',
+        shortLabel: '2-6',
+        name: '2-6 教室',
+        festivalName: '2-6 クラス企画展示',
+        desc: '教室棟3Fの2年6組教室。',
+        festivalDesc: '2-6 クラス企画展示です。',
+        x: 0, z: 11.215, w: 5.4, d: 3.53, color: 0x3b82f6
+      },
+      {
+        id: 'class_1_1',
+        building: '教室棟',
+        floor: 4,
+        category: 'regular',
+        shortLabel: '1-1',
+        name: '1-1 教室',
+        festivalName: '1-1 クラス企画展示',
+        desc: '教室棟4Fの1年1組教室。',
+        festivalDesc: '1-1 クラス企画展示です。',
+        x: 0, z: -8.05, w: 5.4, d: 3.5, color: 0x3b82f6
+      },
+      {
+        id: 'class_1_2',
+        building: '教室棟',
+        floor: 4,
+        category: 'regular',
+        shortLabel: '1-2',
+        name: '1-2 教室',
+        festivalName: '1-2 クラス企画展示',
+        desc: '教室棟4Fの1年2組教室。',
+        festivalDesc: '1-2 クラス企画展示です。',
+        x: 0, z: -4.525, w: 5.4, d: 3.55, color: 0x3b82f6
+      },
+      {
+        id: 'class_1_3',
+        building: '教室棟',
+        floor: 4,
+        category: 'regular',
+        shortLabel: '1-3',
+        name: '1-3 教室',
+        festivalName: '1-3 クラス企画展示',
+        desc: '教室棟4Fの1年3組教室。',
+        festivalDesc: '1-3 クラス企画展示です。',
+        x: 0, z: 0.6, w: 5.4, d: 3.54, color: 0x3b82f6
+      },
+      {
+        id: 'class_1_4',
+        building: '教室棟',
+        floor: 4,
+        category: 'regular',
+        shortLabel: '1-4',
+        name: '1-4 教室',
+        festivalName: '1-4 クラス企画展示',
+        desc: '教室棟4Fの1年4組教室。',
+        festivalDesc: '1-4 クラス企画展示です。',
+        x: 0, z: 4.135, w: 5.4, d: 3.53, color: 0x3b82f6
+      },
+      {
+        id: 'class_1_5',
+        building: '教室棟',
+        floor: 4,
+        category: 'regular',
+        shortLabel: '1-5',
+        name: '1-5 教室',
+        festivalName: '1-5 クラス企画展示',
+        desc: '教室棟4Fの1年5組教室。',
+        festivalDesc: '1-5 クラス企画展示です。',
+        x: 0, z: 7.675, w: 5.4, d: 3.55, color: 0x3b82f6
+      },
+      {
+        id: 'class_1_6',
+        building: '教室棟',
+        floor: 4,
+        category: 'regular',
+        shortLabel: '1-6',
+        name: '1-6 教室',
+        festivalName: '1-6 クラス企画展示',
+        desc: '教室棟4Fの1年6組教室。',
+        festivalDesc: '1-6 クラス企画展示です。',
+        x: 0, z: 11.215, w: 5.4, d: 3.53, color: 0x3b82f6
+      },
+      {
+        id: 'kyuyou_room',
+        building: '教室棟',
+        floor: 1,
+        category: 'admin',
+        shortLabel: '休養室',
+        name: '休養室',
+        festivalName: '休養室',
+        desc: '教室棟1F北側の休養室。',
+        festivalDesc: '休養室です。',
+        x: 0, z: -12.45, w: 5.4, d: 1.8, color: 0x10b981
+      },
+      {
+        id: 'shokuin_kae',
+        building: '教室棟',
+        floor: 1,
+        category: 'admin',
+        shortLabel: '職員更衣室',
+        name: '職員更衣室',
+        festivalName: '職員更衣室',
+        desc: '教室棟1Fの職員更衣室。',
+        festivalDesc: '職員更衣室です。',
+        x: 0, z: -8.925, w: 5.4, d: 1.75, color: 0x10b981
+      },
+      {
+        id: 'seito_junbi',
+        building: '教室棟',
+        floor: 1,
+        category: 'admin',
+        shortLabel: '生徒指導準備室',
+        name: '生徒指導準備室',
+        festivalName: '生徒指導準備室',
+        desc: '教室棟1Fの生徒指導準備室。',
+        festivalDesc: '生徒指導準備室です。',
+        x: 0, z: -7.175, w: 5.4, d: 1.75, color: 0x10b981
+      },
+      {
+        id: 'shokou_guchi_n',
+        building: '教室棟',
+        floor: 1,
+        category: 'facility',
+        shortLabel: '昇降口(北)',
+        name: '昇降口（北側）',
+        festivalName: '昇降口（北側）',
+        desc: '教室棟1F北側の昇降口（グラウンド側）。',
+        festivalDesc: '昇降口（北側）です。',
+        x: 0, z: -4.525, w: 5.4, d: 3.55, color: 0x0ea5e9
+      },
+      {
+        id: 'bukomon_room',
+        building: '教室棟',
+        floor: 1,
+        category: 'special',
+        shortLabel: '部顧問室',
+        name: '部顧問室',
+        festivalName: '部顧問室',
+        desc: '教室棟1Fの部顧問室。',
+        festivalDesc: '部顧問室です。',
+        x: 0, z: 11.215, w: 5.4, d: 3.53, color: 0xa855f7
+      },
+      {
+        id: 'shinro_etsuran',
+        building: '教室棟',
+        floor: 2,
+        category: 'special',
+        shortLabel: '進路閲覧室',
+        name: '進路閲覧室',
+        festivalName: '進路閲覧室',
+        desc: '教室棟2F北側の進路閲覧室（第一産振棟への渡り廊下の隣）。',
+        festivalDesc: '進路閲覧室です。',
+        x: 0, z: -12.45, w: 5.4, d: 1.8, color: 0xa855f7
+      },
+      {
+        id: 'study_room_8',
+        building: '教室棟',
+        floor: 3,
+        category: 'special',
+        shortLabel: '学習室8',
+        name: '学習室8',
+        festivalName: '学習室8',
+        desc: '教室棟3F南端の学習室8。',
+        festivalDesc: '学習室8です。',
+        x: 0, z: 16.35, w: 5.4, d: 3.5, color: 0xa855f7
+      },
+      {
+        id: 'junbi_4f',
+        building: '教室棟',
+        floor: 4,
+        category: 'special',
+        shortLabel: '準備室',
+        name: '準備室',
+        festivalName: '準備室',
+        desc: '教室棟4Fの準備室（視聴覚室の隣）。',
+        festivalDesc: '準備室です。',
+        x: 0, z: -10.675, w: 5.4, d: 1.75, color: 0xa855f7
+      },
+      {
+        id: 'honkan_library_prep',
+        building: '本館',
+        floor: 3,
+        category: 'special',
+        shortLabel: '図書準備室・閲覧室',
+        name: '図書準備室・閲覧室',
+        festivalName: '図書準備室・閲覧室',
+        desc: '本館3Fの図書準備室・閲覧室。',
+        festivalDesc: '図書準備室・閲覧室です。',
+        x: 13.5, z: 8.55, w: 5.2, d: 8.2, color: 0xa855f7
+      },
+      {
+        id: 'rika_prep_1f',
+        building: '理科棟',
+        floor: 1,
+        category: 'special',
+        shortLabel: '準備室',
+        name: '理科棟準備室',
+        festivalName: '理科棟準備室',
+        desc: '理科棟1Fの準備室（化学室の隣）。',
+        festivalDesc: '理科棟準備室です。',
+        x: -36.35, z: -22.0, w: 4.5, d: 4.6, color: 0xa855f7
+      },
+      {
+        id: 'rika_prep_2f',
+        building: '理科棟',
+        floor: 2,
+        category: 'special',
+        shortLabel: '準備室',
+        name: '理科棟準備室',
+        festivalName: '理科棟準備室',
+        desc: '理科棟2Fの準備室（物理室の隣）。',
+        festivalDesc: '理科棟準備室です。',
+        x: -36.35, z: -22.0, w: 4.5, d: 4.6, color: 0xa855f7
+      },
+      {
+        id: 'rika_prep_3f',
+        building: '理科棟',
+        floor: 3,
+        category: 'special',
+        shortLabel: '準備室',
+        name: '理科棟準備室',
+        festivalName: '理科棟準備室',
+        desc: '理科棟3Fの準備室（美術室の隣）。',
+        festivalDesc: '理科棟準備室です。',
+        x: -36.35, z: -22.0, w: 4.5, d: 4.6, color: 0xa855f7
+      },
+      {
+        id: 'volley_court',
+        building: '屋外・体育館',
+        floor: 1,
+        category: 'facility',
+        shortLabel: 'バレーコート',
+        name: 'バレーコート',
+        festivalName: 'バレーコート',
+        desc: 'テニスコートの隣（西側）のバレーコート。',
+        festivalDesc: 'バレーコートです。',
+        x: -16.5, z: -8.0, w: 17.0, d: 5.0, color: 0x16a34a, isGround: true
+      }
+    ];
+
+    const BUILDING_HEADERS = [
+      { key: '本館', title: '本館 (1〜3F)', x: 13.5, z: 6.3, topFloor: 3 },
+      { key: '教室棟', title: '教室棟 (1〜4F)', x: 0, z: 0, topFloor: 4 },
+      { key: '第一産振棟', title: '第一産振棟 (1〜3F)', x: -16.5, z: -14.0, topFloor: 3 },
+      { key: '第2産振棟', title: '第2産振棟 (1〜4F)', x: 13.5, z: 19.5, topFloor: 4 },
+      { key: '屋外・体育館', title: '購買', x: 5.8, z: 17.0, topFloor: 1 },
+      { key: '屋外・体育館', title: '体育館', x: 23.0, z: -14.5, topFloor: 2 },
+      { key: '家庭科棟', title: '家庭科棟 (1〜3F)', x: -16.5, z: -22.0, topFloor: 3 },
+      { key: '理科棟', title: '理科棟 (1〜3F)', x: -34.3, z: -22.0, topFloor: 3 },
+      { key: '屋外・体育館', title: '武道場', x: -51.2, z: -23.0, topFloor: 2 }
+    ];
+
+    // NFCタグ設置場所 → 3Dマップ上でハイライトする部屋ID
+    const SPOT_ROOM = {
+      honkan_office: 'honkan_office',
+      kyoshitsu_central: 'central_entrance',
+      kyoshitsu_shokou: 'shokou_guchi',
+      sanshin1_1f: 'sanshin1_wc_1f',
+      sanshin2_1f: 'sanshin2_wc_1f',
+      koubai_front: 'koubai_hut',
+      gym_entrance: 'gymnasium'
+    };
+    NFC_SPOTS.forEach(s => { s.roomId = SPOT_ROOM[s.id] || null; });
+
+    // 「行き先を探す」画面の"よく行く場所"ボタン（来訪者が多い順に並べ替え可）
+    const POPULAR_IDS = [
+      'honkan_staff', 'honkan_principal', 'career_support', 'student_support'
+    ];
+
+    // 文化祭・公開日の期間（この期間は自動で文化祭モード）。例: [['2026-09-12', '2026-09-13']]
+    const FESTIVAL_PERIODS = [];
+
+    // 来訪者ビューの切替は URL に spot= があるかどうかで決まる
+    //   例) https://〜/index.html?spot=honkan_office   → 来訪者ビュー（NFCタグ用）
+    //       https://〜/index.html                      → 管理ビュー
+    //       https://〜/index.html?spot=...&admin=1     → 管理ビュー（spot指定つき）
+    const STORAGE_KEY = 'schoolmap3d_overrides_v1';
+
+    // =========================================================================
+    // 2. App State
+    // =========================================================================
+    const state = {
+      view: 'admin',          // 'visitor' | 'admin'
+      previewing: false,      // 管理者が来訪者画面を確認中
+      tab: 'find',            // 'route' | 'find'
+      mode: 'normal',
+      weather: 'sunny',
+      activeSpotId: 'honkan_office',
+      selectedRoomId: null,
+      activeFloor: 'all',
+      explodedView: true,
+      labelMode: 'smart',
+      dragMode: 'guided',     // 'guided'(固定軸) | 'pan' | 'rotate'
+      isTopView: false,
+      buildingFilter: 'all',
+      categoryFilter: 'all',
+      searchQuery: '',
+      route: null,
+      stepIdx: -1             // -1 = ルート全体
+    };
+
+    let bannerTimeout = null;
+    let routeLegMeshes = [];
+    let routeJoints = [];
+    let routeEndMarker = null;
+
+    const esc = (s) => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    const normText = (s) => String(s == null ? '' : s).normalize('NFKC').toLowerCase();
+
+    function isFestivalToday() {
+      const d = new Date();
+      const ymd = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+      return FESTIVAL_PERIODS.some(([a, b]) => ymd >= a && ymd <= (b || a));
+    }
+
+    // ---- 編集内容（この端末に保存） ---------------------------------------
+    let overrides = { rooms: {}, baseUrl: '' };
+    const EDITABLE_FIELDS = ['name', 'desc', 'festivalName', 'festivalDesc', 'x', 'z', 'w', 'd'];
+    const NUMERIC_FIELDS = ['x', 'z', 'w', 'd'];
+
+    function loadOverrides() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) overrides = sanitizeOverrides(JSON.parse(raw));
+      } catch (e) { overrides = { rooms: {}, baseUrl: '' }; }
+    }
+    function saveOverrides() {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(overrides)); } catch (e) {}
+    }
+    function sanitizeOverrides(obj) {
+      const out = { rooms: {}, baseUrl: '' };
+      if (!obj || typeof obj !== 'object') return out;
+      if (typeof obj.baseUrl === 'string') out.baseUrl = obj.baseUrl.slice(0, 300);
+      const rooms = obj.rooms && typeof obj.rooms === 'object' ? obj.rooms : {};
+      Object.keys(rooms).forEach(id => {
+        if (!ROOMS.some(r => r.id === id)) return;
+        const src = rooms[id] || {};
+        const dst = {};
+        EDITABLE_FIELDS.forEach(f => {
+          if (!(f in src)) return;
+          if (NUMERIC_FIELDS.includes(f)) {
+            const n = Number(src[f]);
+            if (Number.isFinite(n) && Math.abs(n) < 500 && (f === 'x' || f === 'z' || n >= 0.5)) dst[f] = n;
+          } else if (typeof src[f] === 'string') {
+            dst[f] = src[f].slice(0, 120);
+          }
+        });
+        if (Object.keys(dst).length) out.rooms[id] = dst;
+      });
+      return out;
+    }
+    function applyOverrides() {
+      Object.keys(overrides.rooms).forEach(id => {
+        const room = ROOMS.find(r => r.id === id);
+        if (room) Object.assign(room, overrides.rooms[id]);
+      });
+    }
+
+    function defaultBaseUrl() {
+      if (overrides.baseUrl) return overrides.baseUrl;
+      if (/^https?:$/.test(window.location.protocol)) {
+        return window.location.origin + window.location.pathname;
+      }
+      return 'https://school-map.example.ed.jp/';
+    }
+
+    function applyUrlParamsOnLoad() {
+      let hasSpot = false;
+      let hasDest = false;
+      let forceAdmin = false;
+      let modeParam = null;
+      try {
+        const params = new URLSearchParams(window.location.search);
+        const spotParam = params.get('spot');
+        const destParam = params.get('dest');
+        modeParam = params.get('mode');
+        const weatherParam = params.get('weather');
+        forceAdmin = false;   // 公開版: 管理画面なし
+        if (spotParam && NFC_SPOTS.some(s => s.id === spotParam)) {
+          state.activeSpotId = spotParam;
+          hasSpot = true;
+        }
+        if (destParam && ROOMS.some(r => r.id === destParam)) {
+          state.selectedRoomId = destParam;
+          hasDest = true;
+        }
+        if (weatherParam === 'rain' || weatherParam === 'sunny') state.weather = weatherParam;
+      } catch (e) {}
+
+      if (modeParam === 'festival' || modeParam === 'normal') state.mode = modeParam;
+      else state.mode = isFestivalToday() ? 'festival' : 'normal';
+
+      state.view = 'visitor';   // 公開版: 常に来訪者画面
+      // 管理ビューでは従来どおりサンプル目的地を出しておく
+      if (state.view === 'admin' && !hasDest) state.selectedRoomId = 'programming_lab';
+    }
+
+    function getFloorY(floor) {
+      const gap = state.explodedView && state.activeFloor === 'all' ? 4.2 : 2.4;
+      return (floor - 1) * gap;
+    }
+
+    function getRoomTitle(room) {
+      return state.mode === 'festival' ? room.festivalName : room.name;
+    }
+
+    function getRoomDesc(room) {
+      return state.mode === 'festival' ? room.festivalDesc : room.desc;
+    }
+
+
+    let scene, camera, renderer, controls;
+    let floorGroups = {};
+    let roomMeshes = [];
+    let sanshin3FBridgeMesh = null;
+    let rain3FBridges = [];
+    let beaconGroup = null;
+    let routeLineGroup = null;
+    let routeParticles = [];
+    let labelElements = [];
+    let bldgBadgeElements = [];
+    let raycaster, pointer;
+
+    const camFlight = {
+      active: false,
+      targetGoal: new THREE.Vector3(2, 3.5, -2),
+      posGoal: new THREE.Vector3(52, 26, -2)
+    };
+
+    function flyToView(targetX, targetY, targetZ, posX, posY, posZ, topDown = false) {
+      state.isTopView = topDown;
+      applyDragModeToControls();
+      camFlight.targetGoal.set(targetX, targetY, targetZ);
+      camFlight.posGoal.set(posX, posY, posZ);
+      camFlight.active = true;
+    }
+
+    function initThreeScene() {
+      const container = document.getElementById('canvas-container');
+      const w = Math.max(container.clientWidth, 320);
+      const h = Math.max(container.clientHeight, 320);
+
+      scene = new THREE.Scene();
+
+      // Position camera at the exact Front (East side +X looking West -X) as specified by user's screenshot!
+      camera = new THREE.PerspectiveCamera(40, w / h, 1, 350);
+      camera.position.set(48, 22, -2);
+
+      renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: 'high-performance' });
+      renderer.setClearColor(0x0b1120, 1);
+      renderer.setSize(w, h);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
+      container.insertBefore(renderer.domElement, container.firstChild);
+
+      controls = new THREE.OrbitControls(camera, renderer.domElement);
+      controls.target.set(2, 3.5, -2);
+      controls.enableDamping = true;
+      controls.dampingFactor = 0.12;
+      controls.screenSpacePanning = true;
+      controls.rotateSpeed = 0.65;
+      controls.panSpeed = 0.9;
+      controls.zoomSpeed = 1.0;
+      controls.minDistance = 16;
+      controls.maxDistance = 150;
+
+      applyDragModeToControls();
+
+      controls.addEventListener('start', () => {
+        camFlight.active = false;
+      });
+
+      const ambientLight = new THREE.AmbientLight(0xe2e8f0, 0.85);
+      scene.add(ambientLight);
+
+      const dirLight = new THREE.DirectionalLight(0xffffff, 0.9);
+      dirLight.position.set(45, 60, 20);
+      scene.add(dirLight);
+
+      const grid = new THREE.GridHelper(92, 46, 0x334155, 0x1e293b);
+      grid.position.y = -0.25;
+      scene.add(grid);
+
+      const walkMat = new THREE.MeshBasicMaterial({ color: 0x334155 });
+      const path1 = new THREE.Mesh(new THREE.BoxGeometry(3.0, 0.06, 2.4), walkMat);
+      path1.position.set(9.2, -0.18, 16.0);
+      scene.add(path1);
+
+      const pathGym = new THREE.Mesh(new THREE.BoxGeometry(1.6, 0.06, 14.0), walkMat);
+      pathGym.position.set(18.2, -0.18, -6.5);
+      scene.add(pathGym);
+
+      buildCampusFloors();
+
+      beaconGroup = new THREE.Group();
+      const coneGeo = new THREE.ConeGeometry(0.7, 1.7, 12);
+      const coneMat = new THREE.MeshLambertMaterial({ color: 0xfbbf24, emissive: 0xd97706 });
+      const cone = new THREE.Mesh(coneGeo, coneMat);
+      cone.rotation.x = Math.PI;
+      cone.position.y = 2.0;
+      beaconGroup.add(cone);
+
+      const ringGeo = new THREE.RingGeometry(0.5, 1.05, 16);
+      const ringMat = new THREE.MeshBasicMaterial({ color: 0xfbbf24, side: THREE.DoubleSide });
+      const ring = new THREE.Mesh(ringGeo, ringMat);
+      ring.rotation.x = -Math.PI / 2;
+      ring.position.y = 0.2;
+      beaconGroup.add(ring);
+      scene.add(beaconGroup);
+
+      routeLineGroup = new THREE.Group();
+      scene.add(routeLineGroup);
+
+      raycaster = new THREE.Raycaster();
+      pointer = new THREE.Vector2();
+
+      setupClickPicking(renderer.domElement);
+      window.addEventListener('resize', onWindowResize);
+      if (window.ResizeObserver) {
+        new ResizeObserver(() => onWindowResize()).observe(container);
+      }
+    }
+
+    function applyDragModeToControls() {
+      if (!controls) return;
+      if (state.isTopView) {
+        controls.minPolarAngle = 0.02;
+        controls.maxPolarAngle = 0.15;
+        controls.enablePan = true;
+        return;
+      }
+
+      if (state.dragMode === 'guided') {
+        // GUIDED TURNTABLE MODE:
+        // Locks vertical pitch between 38 deg and 55 deg so the building NEVER flattens or flips,
+        // and disables accidental off-center panning so 1-finger drag simply turns the school left/right!
+        controls.enablePan = false;
+        controls.minPolarAngle = 0.3;
+        controls.maxPolarAngle = Math.PI / 2 - 0.03;
+        controls.mouseButtons = {
+          LEFT: THREE.MOUSE.ROTATE,
+          MIDDLE: THREE.MOUSE.DOLLY,
+          RIGHT: THREE.MOUSE.ROTATE
+        };
+        controls.touches = {
+          ONE: THREE.TOUCH.ROTATE,
+          TWO: THREE.TOUCH.DOLLY_ROTATE
+        };
+      } else if (state.dragMode === 'pan') {
+        controls.enablePan = true;
+        controls.minPolarAngle = 0.35;
+        controls.maxPolarAngle = Math.PI / 2 - 0.08;
+        controls.mouseButtons = {
+          LEFT: THREE.MOUSE.PAN,
+          MIDDLE: THREE.MOUSE.DOLLY,
+          RIGHT: THREE.MOUSE.ROTATE
+        };
+        controls.touches = {
+          ONE: THREE.TOUCH.PAN,
+          TWO: THREE.TOUCH.DOLLY_ROTATE
+        };
+      } else {
+        controls.enablePan = true;
+        controls.minPolarAngle = 0.2;
+        controls.maxPolarAngle = Math.PI / 2 - 0.05;
+        controls.mouseButtons = {
+          LEFT: THREE.MOUSE.ROTATE,
+          MIDDLE: THREE.MOUSE.DOLLY,
+          RIGHT: THREE.MOUSE.PAN
+        };
+        controls.touches = {
+          ONE: THREE.TOUCH.ROTATE,
+          TWO: THREE.TOUCH.DOLLY_PAN
+        };
+      }
+    }
+
+    function buildCampusFloors() {
+      Object.values(floorGroups).forEach(g => scene.remove(g));
+      floorGroups = {};
+      roomMeshes = [];
+      sanshin3FBridgeMesh = null;
+      rain3FBridges = [];
+
+      const labelsLayer = document.getElementById('labels-layer');
+      labelsLayer.innerHTML = '';
+      labelElements = [];
+      bldgBadgeElements = [];
+
+      const slabMat = new THREE.MeshLambertMaterial({
+        color: 0x1e293b,
+        transparent: true,
+        opacity: 0.75
+      });
+      const bridgeMat = new THREE.MeshLambertMaterial({
+        color: 0x64748b,
+        transparent: true,
+        opacity: 0.85
+      });
+
+      [1, 2, 3, 4].forEach(fl => {
+        const group = new THREE.Group();
+        group.position.y = getFloorY(fl);
+
+        const kyoshitsuSlab = new THREE.Mesh(new THREE.BoxGeometry(6.2, 0.2, 36.2), slabMat);
+        kyoshitsuSlab.position.set(0, 0, 0);
+        group.add(kyoshitsuSlab);
+
+        if (fl <= 3) {
+          const honkanSlab = new THREE.Mesh(new THREE.BoxGeometry(5.8, 0.2, 17.0), slabMat);
+          honkanSlab.position.set(13.5, 0, 6.3);
+          group.add(honkanSlab);
+
+          const honkanBridge = new THREE.Mesh(new THREE.BoxGeometry(7.8, 0.18, 1.8), bridgeMat);
+          honkanBridge.position.set(6.8, 0.04, -1.9);   // 本館の右隅（北側）
+          group.add(honkanBridge);
+          if (fl === 1) {
+            const honkanBridgeS = new THREE.Mesh(new THREE.BoxGeometry(7.8, 0.18, 1.8), bridgeMat);
+            honkanBridgeS.position.set(6.8, 0.04, 13.8);  // 1Fのみ：購買のところ
+            group.add(honkanBridgeS);
+          }
+        }
+
+        if (fl <= 3) {
+          const sanshin1Slab = new THREE.Mesh(new THREE.BoxGeometry(17.2, 0.2, 5.2), slabMat);
+          sanshin1Slab.position.set(-16.5, 0, -14.0);
+          group.add(sanshin1Slab);
+
+          const s1BridgeMat = fl === 3
+            ? new THREE.MeshBasicMaterial({ color: 0x38bdf8 })
+            : bridgeMat;
+          const sanshin1Bridge = new THREE.Mesh(new THREE.BoxGeometry(5.4, 0.18, 1.8), s1BridgeMat);
+          sanshin1Bridge.position.set(-5.6, 0.04, -14.0);
+          group.add(sanshin1Bridge);
+          if (fl === 3) {
+            sanshin3FBridgeMesh = sanshin1Bridge;
+            rain3FBridges.push(sanshin1Bridge);
+          }
+        }
+
+        if (fl <= 3) {
+          const kateiSlab = new THREE.Mesh(new THREE.BoxGeometry(17.2, 0.2, 5.2), slabMat);
+          kateiSlab.position.set(-16.5, 0, -22.0);
+          group.add(kateiSlab);
+          const rikaSlab = new THREE.Mesh(new THREE.BoxGeometry(17.2, 0.2, 5.2), slabMat);
+          rikaSlab.position.set(-34.3, 0, -22.0);
+          group.add(rikaSlab);
+          {
+            const kateiBridge = new THREE.Mesh(
+              new THREE.BoxGeometry(1.8, 0.18, 3.2),
+              fl === 3 ? new THREE.MeshBasicMaterial({ color: 0x38bdf8 }) : bridgeMat
+            );
+            kateiBridge.position.set(-16.0, 0.04, -18.0);
+            group.add(kateiBridge);
+            if (fl === 3) rain3FBridges.push(kateiBridge);
+          }
+        }
+
+        const sanshin2Slab = new THREE.Mesh(new THREE.BoxGeometry(5.8, 0.2, 8.0), slabMat);
+        sanshin2Slab.position.set(13.5, 0, 19.5);
+        group.add(sanshin2Slab);
+
+        floorGroups[fl] = group;
+        scene.add(group);
+      });
+
+      const lineMat = new THREE.LineBasicMaterial({
+        color: 0xe2e8f0,
+        transparent: true,
+        opacity: 0.4
+      });
+
+      ROOMS.forEach(room => {
+        const flGroup = floorGroups[room.floor];
+        let roomHeight = 0.95;
+        if (room.isGym) roomHeight = 2.8;
+        if (room.isHut) roomHeight = 1.4;
+        if (room.isGround) roomHeight = 0.15;
+
+        const geo = new THREE.BoxGeometry(room.w, roomHeight, room.d);
+        const mat = new THREE.MeshLambertMaterial({
+          color: room.color,
+          transparent: true,
+          opacity: room.isGround ? 0.45 : 0.68
+        });
+        const mesh = new THREE.Mesh(geo, mat);
+        mesh.position.set(room.x, roomHeight / 2 + 0.12, room.z);
+        mesh.userData = { roomId: room.id };
+
+        const edges = new THREE.EdgesGeometry(geo);
+        mesh.add(new THREE.LineSegments(edges, lineMat));
+
+        flGroup.add(mesh);
+        roomMeshes.push(mesh);
+
+        const labelEl = document.createElement('div');
+        labelEl.className = 'label-3d px-1.5 py-0.5 rounded text-[10px] font-semibold border shadow';
+        labelEl.dataset.roomId = room.id;
+        labelEl.addEventListener('click', (e) => {
+          e.stopPropagation();
+          selectDestinationRoom(room.id, true);
+        });
+        labelsLayer.appendChild(labelEl);
+        labelElements.push({ room, mesh, el: labelEl });
+      });
+
+      BUILDING_HEADERS.forEach(bh => {
+        const badge = document.createElement('div');
+        badge.className = 'building-badge-3d px-2 py-0.5 rounded-md bg-slate-950/90 text-sky-200 border border-sky-400/40 text-[11px] font-bold shadow';
+        badge.textContent = bh.title;
+        labelsLayer.appendChild(badge);
+        bldgBadgeElements.push({ bh, el: badge });
+      });
+
+      const nfcLabelEl = document.createElement('div');
+      nfcLabelEl.id = 'beacon-3d-label';
+      nfcLabelEl.className = 'label-3d px-2 py-0.5 rounded-full bg-amber-400 text-slate-950 text-[11px] font-extrabold shadow-lg border border-white flex items-center gap-1 pointer-events-none z-30';
+      nfcLabelEl.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-slate-950"></span><span id="beacon-label-text">現在地: ★本館1F 事務室</span>';
+      labelsLayer.appendChild(nfcLabelEl);
+    }
+
+    // =========================================================================
+    // 4. 経路グラフ
+    //    ★ここに書いてある通路の位置・つながりは、すべて「仮」の想定です。
+    //      実際の校舎図に合わせて、下の GRAPH_CFG を直せば経路案内が自動で変わります。
+    //    ・buildings : 各棟の廊下（axis方向に1本の廊下を通し、階段などの特別地点を置く）
+    //    ・bridges   : 棟と棟をつなぐ渡り廊下（rainClosedFloors = 雨天に通行止めの階）
+    //    ・outdoor   : 屋外の通路上の地点、doors : 屋内⇔屋外の出入口
+    //    ・部屋・NFCスポットは、同じ階の一番近い廊下地点に自動で接続されます
+    // =========================================================================
+    const GRAPH_CFG = {
+      metersPerUnit: 2.5,   // 3D座標1 = 約2.5m
+      stairCost: 7,         // 階段1フロア分の移動コスト（座標単位）
+      stairMeters: 8,       // 階段1フロア分の歩行距離(m)
+      walkSpeed: 1.2,       // m/秒
+      buildings: {
+        '教室棟': {
+          axis: 'z', fixed: 0, range: [-17.5, 17.5], floors: [1, 2, 3, 4],
+          specials: [
+            { key: 'stairC', pos: -1.56, stairs: true },  // 右階段（3年1〜2組の南・生徒サポート室の北）
+            { key: 'stairS', pos: 14.2, stairs: true },   // 左階段（6組の南・南端学習室の北）
+            { key: 'brN', pos: -1.9, floors: [1, 2, 3] }, // 本館北端への渡り廊下（右階段のすぐ隣）
+            { key: 'brHS', pos: 13.8, floors: [1] },      // 本館南端への渡り廊下（左階段の隣）
+            { key: 'brS1', pos: -14.0, floors: [1, 2, 3] },   // 第一産振棟への連絡通路
+            { key: 'doorE', pos: 6.8, floors: [1] },          // 東口（購買側）
+            { key: 'doorN', pos: -4.5, floors: [1] },         // 昇降口（北側・グラウンド側）
+            { key: 'doorW', pos: 15.6, floors: [1] }          // 昇降口（南側・アピタ側）
+          ]
+        },
+        '本館': {
+          axis: 'z', fixed: 13.5, range: [-2.0, 14.6], floors: [1, 2, 3],
+          specials: [
+            { key: 'brN', pos: -2.0 },                        // 北端の渡り廊下
+            { key: 'stairN', pos: -1.4, stairs: true },       // 北端の階段
+            { key: 'doorF', pos: 3.9, floors: [1] },          // 1F 正面玄関（事務室前）
+            { key: 'stair', pos: 14.2, stairs: true },        // 南端の階段・トイレ
+            { key: 'brS', pos: 13.8, floors: [1] }            // 南端の渡り廊下（1Fのみ）
+          ],
+          cuts: [{ floor: 2, pos: 7.05 }]                     // 2F 職員室は通り抜け不可
+        },
+        '第2産振棟': {
+          axis: 'z', fixed: 13.5, range: [15.5, 23.5], floors: [1, 2, 3, 4],
+          specials: [{ key: 'stair', pos: 16.0, stairs: true }]
+        },
+        '第一産振棟': {
+          axis: 'x', fixed: -14.0, range: [-24.5, -8.5], floors: [1, 2, 3],
+          specials: [
+            { key: 'stair', pos: -10.0, stairs: true },       // 教室棟への連絡通路の入口
+            { key: 'brK', pos: -16.0, floors: [1, 2, 3] }     // 家庭科棟への渡り廊下（1F／2F CG室手前／3F 情報講義室手前）
+          ]
+        },
+        '家庭科棟': {
+          axis: 'x', fixed: -22.0, range: [-24.5, -8.5], floors: [1, 2, 3],
+          specials: [{ key: 'hall', pos: -16.0, stairs: true }]  // 中央ホール＝渡り廊下の着地点・階段・1F玄関
+        },
+        '理科棟': {
+          axis: 'x', fixed: -22.0, range: [-41.6, -26.0], floors: [1, 2, 3],
+          specials: [
+            { key: 'stair', pos: -40.2, stairs: true },
+            { key: 'doorE', pos: -34.0, floors: [1] }          // 1F玄関（外から）
+          ]
+        }
+      },
+      bridges: [
+        { a: ['教室棟', 'brN'], b: ['本館', 'brN'], floors: [1, 2, 3], upperExtra: 6 },
+        { a: ['教室棟', 'brHS'], b: ['本館', 'brS'], floors: [1] },
+        { a: ['教室棟', 'brS1'], b: ['第一産振棟', 'stair'], floors: [1, 2, 3], rainClosedFloors: [3] },
+        { a: ['第一産振棟', 'brK'], b: ['家庭科棟', 'hall'], floors: [1, 2, 3], rainClosedFloors: [3] }
+      ],
+      outdoor: [
+        { id: 'o_kE', x: 3.8, z: 6.8 },
+        { id: 'o_bS', x: 8.8, z: 15.3 },
+        { id: 'o_koubai', x: 8.8, z: 17.0, via: '購買横' },
+        { id: 'o_s2', x: 9.8, z: 16.2 },
+        { id: 'o_kN', x: -4.5, z: -4.5 },
+        { id: 'o_hFront', x: 18.2, z: 3.9, via: '本館前' },
+        { id: 'o_gymPath', x: 18.2, z: -10.0 },
+        { id: 'o_gym', x: 20.5, z: -10.0, via: '体育館入口' },
+        { id: 'o_kW', x: -4.5, z: 15.6 },
+        { id: 'o_cMid', x: -5.5, z: 0.0 },
+        { id: 'o_cAlley', x: -5.5, z: -18.0 },
+        { id: 'o_alley', x: -16.0, z: -18.0, via: '家庭科棟前' },
+        { id: 'o_cRika', x: -34.0, z: -18.0, via: '理科棟前' },
+        { id: 'o_cBudo', x: -51.0, z: -18.0, via: '武道場前' },
+        { id: 'o_ground', x: -9.5, z: 12.0, via: 'グラウンド' },
+        { id: 'o_s2F', x: 18.2, z: 16.0, via: '第2産振棟前' },
+        { id: 'o_tennis', x: -34.5, z: -8.0, via: 'テニスコート' },
+        { id: 'o_volley', x: -16.5, z: -8.0, via: 'バレーコート' }
+      ],
+      outdoorEdges: [
+        ['o_kE', 'o_bS'], ['o_bS', 'o_s2'], ['o_bS', 'o_koubai'], ['o_koubai', 'o_s2'],
+        ['o_hFront', 'o_gymPath'], ['o_hFront', 'o_s2F'], ['o_gymPath', 'o_gym'],
+        ['o_kW', 'o_cMid'], ['o_cMid', 'o_cAlley'], ['o_cAlley', 'o_alley'],
+        ['o_alley', 'o_cRika'], ['o_cRika', 'o_cBudo'],
+        ['o_kW', 'o_ground'], ['o_kN', 'o_cMid'], ['o_cMid', 'o_volley'], ['o_volley', 'o_tennis']
+      ],
+      doors: [
+        { out: 'o_kE', in: ['教室棟', 'doorE'] },
+        { out: 'o_bS', in: ['本館', 'brS'] },   // 本館1Fの渡り廊下に出て左（南）へ
+        { out: 'o_s2', in: ['第2産振棟', 'stair'] },
+        { out: 'o_s2F', in: ['第2産振棟', 'stair'] },
+        { out: 'o_hFront', in: ['本館', 'doorF'] },
+        { out: 'o_kW', in: ['教室棟', 'doorW'] },
+        { out: 'o_kN', in: ['教室棟', 'doorN'] },
+        { out: 'o_cRika', in: ['理科棟', 'doorE'] },
+        { out: 'o_alley', in: ['家庭科棟', 'hall'] }
+      ],
+      // 屋外にある部屋／スポットは、接続先の屋外地点を直接指定
+      roomAttach: { koubai_hut: 'o_koubai', gymnasium: 'o_gym', sports_ground: 'o_ground', tennis_court: 'o_tennis', volley_court: 'o_volley', budojo: 'o_cBudo' },
+      spotAttach: { koubai_front: 'o_koubai', gym_entrance: 'o_gym' },
+      // 部屋の出入口を追加（廊下の別の位置にもドアがある場合）。部屋の中は通り抜けできません。
+      roomExtraDoors: { honkan_staff: [{ pos: 8.6 }] },
+      // 出入口をこの扉だけにする部屋（職員室は保健室側＝南の階段から案内）
+      roomOnlyExtraDoors: ['honkan_staff']
+    };
+
+    let G = null; // { nodes: Map, adj: Map }
+
+    function buildGraph() {
+      const nodes = new Map();
+      const adj = new Map();
+      const addNode = (id, b, f, x, z, extra = {}) => {
+        nodes.set(id, Object.assign({ id, b, f, x, z }, extra));
+        adj.set(id, []);
+      };
+      const addEdge = (a, b, kind, cost, extra = {}) => {
+        const na = nodes.get(a), nb = nodes.get(b);
+        const c = cost != null ? cost : Math.hypot(na.x - nb.x, na.z - nb.z);
+        adj.get(a).push(Object.assign({ to: b, kind, cost: c }, extra));
+        adj.get(b).push(Object.assign({ to: a, kind, cost: c }, extra));
+      };
+
+      const chain = {};
+      Object.entries(GRAPH_CFG.buildings).forEach(([bName, cfg]) => {
+        cfg.floors.forEach(f => {
+          const specials = cfg.specials.filter(s => !s.floors || s.floors.includes(f));
+          const positions = specials.map(s => ({ pos: s.pos, key: s.key, stairs: !!s.stairs }));
+          for (let p = cfg.range[0]; p <= cfg.range[1] + 1e-6; p += 3) {
+            if (!specials.some(s => Math.abs(s.pos - p) < 0.9)) positions.push({ pos: p, key: null, stairs: false });
+          }
+          positions.sort((a, b) => a.pos - b.pos);
+          const list = positions.map((p, idx) => {
+            const id = `${bName}${f}F:${p.key || 't' + idx}`;
+            const x = cfg.axis === 'x' ? p.pos : cfg.fixed;
+            const z = cfg.axis === 'z' ? p.pos : cfg.fixed;
+            addNode(id, bName, f, x, z, { key: p.key });
+            return { pos: p.pos, id };
+          });
+          const cuts = (cfg.cuts || []).filter(c => c.floor === f);
+          for (let i = 0; i < list.length - 1; i++) {
+            if (cuts.some(c => list[i].pos < c.pos && list[i + 1].pos > c.pos)) continue; // 通り抜け不可の区間
+            addEdge(list[i].id, list[i + 1].id, 'walk');
+          }
+          chain[`${bName}|${f}`] = list;
+        });
+        cfg.specials.filter(s => s.stairs).forEach(s => {
+          for (let i = 0; i < cfg.floors.length - 1; i++) {
+            addEdge(`${bName}${cfg.floors[i]}F:${s.key}`, `${bName}${cfg.floors[i + 1]}F:${s.key}`, 'stairs', GRAPH_CFG.stairCost);
+          }
+        });
+      });
+
+      GRAPH_CFG.bridges.forEach(br => {
+        br.floors.forEach(f => {
+          const a = `${br.a[0]}${f}F:${br.a[1]}`;
+          const b = `${br.b[0]}${f}F:${br.b[1]}`;
+          if (!nodes.has(a) || !nodes.has(b)) return;
+          const closed = (br.rainClosedFloors || []).includes(f);
+          const ex = (br.extraCost || 0) + (f > 1 ? (br.upperExtra || 0) : 0);
+          const bc = ex ? Math.hypot(nodes.get(a).x - nodes.get(b).x, nodes.get(a).z - nodes.get(b).z) + ex : undefined;
+          addEdge(a, b, 'bridge', bc, closed ? { rainClosed: true } : {});
+        });
+      });
+
+      GRAPH_CFG.outdoor.forEach(o => addNode(o.id, 'out', 1, o.x, o.z, { via: o.via }));
+      GRAPH_CFG.outdoorEdges.forEach(([a, b]) => addEdge(a, b, 'outdoor'));
+      GRAPH_CFG.doors.forEach(d => {
+        const inId = `${d.in[0]}1F:${d.in[1]}`;
+        if (nodes.has(inId) && nodes.has(d.out)) addEdge(d.out, inId, 'door');
+      });
+
+      const nearestOnChain = (bName, f, x, z) => {
+        const cfg = GRAPH_CFG.buildings[bName];
+        const list = chain[`${bName}|${f}`];
+        if (!cfg || !list) return null;
+        const coord = cfg.axis === 'x' ? x : z;
+        let best = null, bd = Infinity;
+        list.forEach(n => {
+          const d = Math.abs(n.pos - coord);
+          if (d < bd) { bd = d; best = n.id; }
+        });
+        return best;
+      };
+
+      ROOMS.forEach(r => {
+        const id = `room:${r.id}`;
+        addNode(id, r.building, r.floor, r.x, r.z, { room: r.id, leaf: true });
+        const target = GRAPH_CFG.roomAttach[r.id] || nearestOnChain(r.building, r.floor, r.x, r.z);
+        const onlyExtra = (GRAPH_CFG.roomOnlyExtraDoors || []).includes(r.id);
+        if (target && !onlyExtra) addEdge(id, target, 'room');
+        (GRAPH_CFG.roomExtraDoors[r.id] || []).forEach(d => {
+          const t2 = nearestOnChain(r.building, r.floor, d.pos, d.pos); // 廊下方向の座標で近い地点を探す
+          if (t2 && (onlyExtra || t2 !== target)) addEdge(id, t2, 'room');
+        });
+      });
+      NFC_SPOTS.forEach(s => {
+        const id = `spot:${s.id}`;
+        addNode(id, s.building, s.floor, s.x, s.z, { spot: s.id, leaf: true });
+        const target = GRAPH_CFG.spotAttach[s.id] || nearestOnChain(s.building, s.floor, s.x, s.z);
+        if (target) addEdge(id, target, 'room');
+      });
+
+      G = { nodes, adj };
+    }
+
+    function shortestPath(fromId, toId, weather) {
+      const dist = new Map();
+      const prev = new Map();
+      const done = new Set();
+      G.nodes.forEach((_, id) => dist.set(id, Infinity));
+      dist.set(fromId, 0);
+      for (;;) {
+        let u = null, ud = Infinity;
+        dist.forEach((d, id) => { if (!done.has(id) && d < ud) { ud = d; u = id; } });
+        if (u === null || u === toId) break;
+        done.add(u);
+        if (u !== fromId && G.nodes.get(u).leaf) continue; // 部屋・スポットの中は通り抜けない
+        G.adj.get(u).forEach(e => {
+          if (weather === 'rain' && e.rainClosed) return;
+          const nd = ud + e.cost;
+          if (nd < dist.get(e.to)) { dist.set(e.to, nd); prev.set(e.to, { from: u, edge: e }); }
+        });
+      }
+      if (!isFinite(dist.get(toId))) return null;
+      const path = [toId];
+      const edges = [];
+      let cur = toId;
+      while (cur !== fromId) {
+        const p = prev.get(cur);
+        edges.unshift(p.edge);
+        path.unshift(p.from);
+        cur = p.from;
+      }
+      return { path, edges, cost: dist.get(toId) };
+    }
+
+    function buildSteps(pts, edges, spot, dest) {
+      const steps = [];
+      const outdoorDest = dest.building === '屋外・体育館';
+      steps.push({ kind: 'start', text: `${spot.shortName}（現在地）`, i0: 0, i1: 0, floor: spot.floor });
+      let i = 0;
+      while (i < edges.length) {
+        const kind = edges[i].kind;
+        if (kind === 'stairs') {
+          let j = i;
+          while (j < edges.length && edges[j].kind === 'stairs') j++;
+          const from = pts[i], to = pts[j];
+          steps.push({
+            kind: 'stairs',
+            text: `${from.b}の階段で${to.f}Fへ${to.f > from.f ? '上がる' : '下りる'}`,
+            i0: i, i1: j, floor: to.f
+          });
+          i = j;
+        } else if (kind === 'bridge') {
+          const from = pts[i], to = pts[i + 1];
+          steps.push({ kind: 'bridge', text: `${from.f}F 渡り廊下で${to.b}へ`, i0: i, i1: i + 1, floor: from.f });
+          i++;
+        } else if (kind === 'door') {
+          const from = pts[i], to = pts[i + 1];
+          steps.push({
+            kind: 'door',
+            text: to.b === 'out' ? `${from.b}から外へ出る` : `${to.b}に入る`,
+            i0: i, i1: i + 1, floor: 1
+          });
+          i++;
+        } else if (kind === 'outdoor') {
+          let j = i;
+          while (j < edges.length && edges[j].kind === 'outdoor') j++;
+          const via = [...new Set(pts.slice(i, j + 1).map(p => p.via).filter(Boolean))];
+          steps.push({
+            kind: 'outdoor',
+            text: '屋外通路を進む' + (via.length ? `（${via.join('→')}）` : ''),
+            i0: i, i1: j, floor: 1
+          });
+          i = j;
+        } else {
+          i++; // 廊下・部屋への出入りは個別ステップにしない
+        }
+      }
+      const last = pts.length - 1;
+      steps.push({
+        kind: 'arrive',
+        text: `${outdoorDest ? '' : dest.floor + 'F '}${dest.shortLabel || getRoomTitle(dest)} に到着`,
+        i0: last, i1: last, floor: dest.floor
+      });
+      return steps;
+    }
+
+    function computeRoute(spot, dest, weather) {
+      if (!G) buildGraph();
+      if (spot.roomId && spot.roomId === dest.id) {
+        const n = G.nodes.get(`spot:${spot.id}`);
+        return {
+          ok: true, same: true, meters: 0, sec: 0, edges: [], notes: ['すでに目的地の前にいます。'],
+          pts: [{ id: n.id, b: n.b, f: n.f, x: n.x, z: n.z }],
+          steps: [{ kind: 'arrive', text: 'ここが目的地です', i0: 0, i1: 0, floor: dest.floor }]
+        };
+      }
+      const from = `spot:${spot.id}`;
+      const to = `room:${dest.id}`;
+      const res = shortestPath(from, to, weather);
+      if (!res) return { ok: false };
+
+      const pts = res.path.map(id => {
+        const n = G.nodes.get(id);
+        return { id, b: n.b, f: n.f, x: n.x, z: n.z, via: n.via };
+      });
+      let meters = 0, flights = 0;
+      res.edges.forEach((e, i) => {
+        if (e.kind === 'stairs') flights++;
+        else meters += Math.hypot(pts[i].x - pts[i + 1].x, pts[i].z - pts[i + 1].z) * GRAPH_CFG.metersPerUnit;
+      });
+      meters = Math.max(5, Math.round(meters + flights * GRAPH_CFG.stairMeters));
+      const sec = Math.max(8, Math.round(meters / GRAPH_CFG.walkSpeed));
+
+      const notes = [];
+      if (weather === 'rain') {
+        const sunny = shortestPath(from, to, 'sunny');
+        if (sunny && sunny.edges.some(e => e.rainClosed)) {
+          notes.push('雨天のため、3Fの連絡通路（第一産振棟・家庭科棟）は通れません。2F経由などの経路で案内しています。');
+        }
+        if (res.edges.some(e => e.kind === 'outdoor')) {
+          notes.push('屋外を通ります。傘をご用意ください。');
+        }
+      }
+      return { ok: true, same: false, pts, edges: res.edges, steps: buildSteps(pts, res.edges, spot, dest), meters, sec, notes };
+    }
+
+    // =========================================================================
+    // 5. Smart Scene State & Route Rendering
+    // =========================================================================
+    function currentSpot() {
+      return NFC_SPOTS.find(s => s.id === state.activeSpotId) || NFC_SPOTS[0];
+    }
+    function currentDest() {
+      return ROOMS.find(r => r.id === state.selectedRoomId) || null;
+    }
+    function routePointToVec(p) {
+      return new THREE.Vector3(p.x, getFloorY(p.f) + 0.55, p.z);
+    }
+
+    function updateSceneState() {
+      const spot = currentSpot();
+      const destRoom = currentDest();
+
+      [1, 2, 3, 4].forEach(fl => {
+        const g = floorGroups[fl];
+        if (!g) return;
+        g.position.y = getFloorY(fl);
+        g.visible = state.activeFloor === 'all' || String(fl) === String(state.activeFloor);
+      });
+
+      rain3FBridges.forEach(m => m.material.color.setHex(state.weather === 'rain' ? 0xef4444 : 0x38bdf8));
+
+      roomMeshes.forEach(mesh => {
+        const rId = mesh.userData.roomId;
+        const room = ROOMS.find(r => r.id === rId);
+        const isSelected = rId === state.selectedRoomId;
+        const isSpotRoom = rId === spot.roomId;
+        const bldgMatch = state.buildingFilter === 'all' || room.building === state.buildingFilter;
+
+        if (isSelected) {
+          mesh.material.color.setHex(0x38bdf8);
+          mesh.material.emissive.setHex(0x0284c7);
+          mesh.material.opacity = 0.98;
+          mesh.scale.set(1, 1.35, 1);
+        } else if (isSpotRoom) {
+          mesh.material.color.setHex(0xf59e0b);
+          mesh.material.emissive.setHex(0xb45309);
+          mesh.material.opacity = 0.92;
+          mesh.scale.set(1, 1.15, 1);
+        } else {
+          mesh.material.color.setHex(room.color);
+          mesh.material.emissive.setHex(0x000000);
+          mesh.material.opacity = bldgMatch ? (room.isGround ? 0.45 : 0.65) : 0.18;
+          mesh.scale.set(1, 1.0, 1);
+        }
+      });
+
+      const spotY = getFloorY(spot.floor);
+      beaconGroup.position.set(spot.x, spotY + 0.2, spot.z);
+      beaconGroup.visible = state.activeFloor === 'all' || String(spot.floor) === String(state.activeFloor);
+
+      const beaconLabelText = document.getElementById('beacon-label-text');
+      if (beaconLabelText) {
+        beaconLabelText.textContent = spot.roomId && spot.roomId === state.selectedRoomId
+          ? `現在地・選択中: ${spot.shortName}`
+          : `現在地: ${spot.shortName}`;
+      }
+
+      build3DNavigationRoute(spot, destRoom);
+
+      labelElements.forEach(({ room, el }) => {
+        const isSelected = room.id === state.selectedRoomId;
+        const isSameAsSpot = room.id === spot.roomId;
+        const floorVisible = state.activeFloor === 'all' || String(room.floor) === String(state.activeFloor);
+        const bldgMatch = state.buildingFilter === 'all' || room.building === state.buildingFilter;
+
+        if (state.labelMode === 'off' || !floorVisible || !bldgMatch || (isSelected && isSameAsSpot)) {
+          el.style.display = 'none';
+          return;
+        }
+
+        const showThisRoomLabel =
+          state.labelMode === 'all' ||
+          isSelected ||
+          state.activeFloor !== 'all' ||
+          state.buildingFilter !== 'all';
+
+        if (!showThisRoomLabel) {
+          el.style.display = 'none';
+          return;
+        }
+
+        el.style.display = 'block';
+        if (isSelected) {
+          el.className = 'label-3d px-2.5 py-1 rounded-lg text-xs font-bold bg-sky-500 text-white border-2 border-white shadow-xl z-20';
+          el.textContent = `★目的地: ${room.floor}F ${room.shortLabel || getRoomTitle(room)}`;
+        } else {
+          el.className = 'label-3d px-1.5 py-0.5 rounded text-[10px] font-medium bg-slate-900/90 text-slate-200 border border-slate-600/80 hover:border-sky-400';
+          el.textContent = room.shortLabel || getRoomTitle(room);
+        }
+      });
+    }
+
+    function clearRouteGroup() {
+      while (routeLineGroup.children.length > 0) {
+        const child = routeLineGroup.children[0];
+        if (child.geometry) child.geometry.dispose();
+        if (child.material) child.material.dispose();
+        routeLineGroup.remove(child);
+      }
+      routeParticles = [];
+      routeLegMeshes = [];
+      routeJoints = [];
+      routeEndMarker = null;
+    }
+
+    function build3DNavigationRoute(spot, destRoom) {
+      clearRouteGroup();
+      const route = destRoom ? computeRoute(spot, destRoom, state.weather) : null;
+      state.route = route;
+      if (route && route.ok) {
+        state.stepIdx = Math.min(state.stepIdx, route.steps.length - 1);
+        const vecs = route.pts.map(routePointToVec);
+        if (vecs.length >= 2) {
+          const path = new THREE.CurvePath();
+          for (let i = 0; i < vecs.length - 1; i++) {
+            const seg = new THREE.LineCurve3(vecs[i], vecs[i + 1]);
+            path.add(seg);
+            if (vecs[i].distanceTo(vecs[i + 1]) < 0.01) continue;
+            const mesh = new THREE.Mesh(
+              new THREE.TubeGeometry(seg, 4, 0.2, 6, false),
+              new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true })
+            );
+            mesh.userData = { leg: i, fa: route.pts[i].f, fb: route.pts[i + 1].f };
+            routeLineGroup.add(mesh);
+            routeLegMeshes.push(mesh);
+          }
+          vecs.forEach((v, i) => {
+            const s = new THREE.Mesh(
+              new THREE.SphereGeometry(0.24, 8, 8),
+              new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true })
+            );
+            s.position.copy(v);
+            s.userData = { idx: i, f: route.pts[i].f };
+            routeLineGroup.add(s);
+            routeJoints.push(s);
+          });
+          for (let i = 0; i < 4; i++) {
+            const sp = new THREE.Mesh(new THREE.SphereGeometry(0.35, 8, 8), new THREE.MeshBasicMaterial({ color: 0xfef08a }));
+            routeLineGroup.add(sp);
+            routeParticles.push({ mesh: sp, curve: path, offset: i / 4 });
+          }
+        }
+        // 目的地ピン
+        const end = vecs[vecs.length - 1];
+        const pin = new THREE.Mesh(
+          new THREE.ConeGeometry(0.6, 1.5, 12),
+          new THREE.MeshBasicMaterial({ color: 0xf43f5e })
+        );
+        pin.rotation.x = Math.PI;
+        pin.position.set(end.x, end.y + 1.8, end.z);
+        pin.userData = { f: route.pts[route.pts.length - 1].f };
+        routeLineGroup.add(pin);
+        routeEndMarker = pin;
+      }
+      updateRouteHighlight();
+      renderRoutePanel();
+    }
+
+    function updateRouteHighlight() {
+      const r = state.route;
+      if (!r || !r.ok) return;
+      const af = state.activeFloor;
+      const step = state.stepIdx >= 0 ? r.steps[state.stepIdx] : null;
+      const ranged = !!step && step.i1 > step.i0;
+      const onFloor = (f) => af === 'all' || String(f) === String(af);
+
+      routeLegMeshes.forEach(m => {
+        const { leg, fa, fb } = m.userData;
+        m.visible = onFloor(fa) || onFloor(fb);
+        const inStep = !ranged || (leg >= step.i0 && leg < step.i1);
+        m.material.opacity = inStep ? 1 : 0.25;
+        m.material.color.setHex(ranged && inStep ? 0xfacc15 : 0x38bdf8);
+      });
+      routeJoints.forEach(s => {
+        const i = s.userData.idx;
+        s.visible = onFloor(s.userData.f);
+        const inStep = !ranged || (i >= step.i0 && i <= step.i1);
+        s.material.opacity = inStep ? 1 : 0.25;
+        s.material.color.setHex(ranged && inStep ? 0xfacc15 : 0x38bdf8);
+      });
+      if (routeEndMarker) routeEndMarker.visible = onFloor(routeEndMarker.userData.f);
+    }
+
+    // カメラを指定地点がちょうど入る位置へ（正面=東側から、固定軸の傾き範囲内で）
+    function frameWorldPoints(vecs, minDist = 24) {
+      if (!vecs.length) return;
+      const box = new THREE.Box3().setFromPoints(vecs);
+      const c = box.getCenter(new THREE.Vector3());
+      const size = box.getSize(new THREE.Vector3());
+      const r = Math.max(size.x, size.z, size.y * 0.8, 6) / 2;
+      const d = Math.min(135, Math.max(minDist, r * 2.6 + 10));
+      const polar = 0.95;
+      flyToView(c.x, c.y, c.z, c.x + Math.sin(polar) * d, c.y + Math.cos(polar) * d, c.z, false);
+    }
+
+    function frameRoute() {
+      const r = state.route;
+      if (!r || !r.ok) return;
+      // 経路表示でもカメラは動かさない（現在のズームを維持）
+    }
+
+    function focusStep(idx) {
+      const r = state.route;
+      if (!r || !r.ok) return;
+      idx = Math.max(-1, Math.min(r.steps.length - 1, idx));
+      state.stepIdx = idx;
+      if (idx < 0) {
+        setActiveFloor('all');
+        frameRoute();
+        return;
+      }
+      const s = r.steps[idx];
+      setActiveFloor(s.kind === 'stairs' ? 'all' : String(s.floor));
+      const r2 = state.route;
+      frameWorldPoints(r2.pts.slice(s.i0, s.i1 + 1).map(routePointToVec), 22);
+    }
+
+    const STEP_ICON = { start: '📍', stairs: '↕️', bridge: '🌉', door: '🚪', outdoor: '🌳', arrive: '🏁' };
+
+    function renderRoutePanel() {
+      const spot = currentSpot();
+      const dest = currentDest();
+      const r = state.route;
+
+      document.getElementById('current-spot-label').textContent = spot.shortName;
+      document.getElementById('route-empty').classList.toggle('hidden', !!dest);
+      document.getElementById('route-body').classList.toggle('hidden', !dest);
+      const badge = document.getElementById('route-distance-badge');
+      if (!dest) { badge.classList.add('hidden'); return; }
+
+      document.getElementById('dest-building-badge').textContent = dest.building;
+      document.getElementById('dest-floor-badge').textContent = dest.building === '屋外・体育館' ? '屋外' : `${dest.floor}F`;
+      document.getElementById('dest-title').textContent = getRoomTitle(dest);
+      document.getElementById('dest-desc').textContent = getRoomDesc(dest);
+
+      const notesEl = document.getElementById('route-notes');
+      const listEl = document.getElementById('route-steps-list');
+
+      if (!r || !r.ok) {
+        badge.classList.add('hidden');
+        notesEl.innerHTML = '<div class="text-[11px] text-rose-300 bg-rose-950/60 border border-rose-500/40 rounded-lg px-2 py-1.5">この場所までの経路を計算できませんでした。</div>';
+        listEl.innerHTML = '';
+        return;
+      }
+
+      if (r.same) {
+        badge.classList.add('hidden');
+      } else {
+        const mins = Math.max(1, Math.round(r.sec / 60));
+        badge.textContent = `約${r.meters}m・徒歩約${mins}分`;
+        badge.classList.remove('hidden');
+      }
+
+      notesEl.innerHTML = r.notes.map(n =>
+        `<div class="text-[11px] text-rose-200 bg-rose-950/60 border border-rose-500/40 rounded-lg px-2 py-1.5">⚠ ${esc(n)}</div>`
+      ).join('');
+
+      listEl.innerHTML = r.steps.map((s, i) => {
+        const active = i === state.stepIdx;
+        const floorTag = s.kind === 'outdoor' ? '屋外' : `${s.floor}F`;
+        const cls = active
+          ? 'border-amber-400 bg-amber-400/10'
+          : 'border-slate-700/80 bg-slate-800/50 hover:bg-slate-800';
+        const numCls = active ? 'bg-amber-400 text-slate-950' : 'bg-sky-600 text-white';
+        return `<li><button type="button" data-step="${i}" class="step-item w-full text-left flex items-start gap-2 p-2 rounded-lg border transition ${cls}">
+          <span class="shrink-0 w-6 h-6 rounded-full text-[11px] font-extrabold flex items-center justify-center ${numCls}">${i + 1}</span>
+          <span class="flex-1 text-[13px] font-semibold leading-snug text-white">${STEP_ICON[s.kind] || ''} ${esc(s.text)}</span>
+          <span class="shrink-0 text-[10px] font-bold px-1.5 py-0.5 rounded bg-slate-900 text-sky-300 border border-slate-700">${floorTag}</span>
+        </button></li>`;
+      }).join('');
+
+      const prev = document.getElementById('step-prev-btn');
+      const next = document.getElementById('step-next-btn');
+      const last = r.steps.length - 1;
+      prev.disabled = state.stepIdx < 0;
+      next.disabled = state.stepIdx >= last;
+      prev.classList.toggle('opacity-40', prev.disabled);
+      next.classList.toggle('opacity-40', next.disabled);
+    }
+
+
+    // =========================================================================
+    // 5. Click Picking & Render Loop
+    // =========================================================================
+    function setupClickPicking(domEl) {
+      let downX = 0;
+      let downY = 0;
+      domEl.addEventListener('pointerdown', (e) => {
+        downX = e.clientX;
+        downY = e.clientY;
+      });
+      domEl.addEventListener('pointerup', (e) => {
+        const dist = Math.hypot(e.clientX - downX, e.clientY - downY);
+        if (dist < 6 && e.button === 0) {
+          handleCanvasClick(e, domEl);
+        }
+      });
+    }
+
+    function handleCanvasClick(e, domEl) {
+      const rect = domEl.getBoundingClientRect();
+      pointer.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+      pointer.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+
+      raycaster.setFromCamera(pointer, camera);
+      const visibleMeshes = roomMeshes.filter(m => m.parent && m.parent.visible);
+      const intersects = raycaster.intersectObjects(visibleMeshes, false);
+      if (intersects.length > 0) {
+        const hitRoomId = intersects[0].object.userData.roomId;
+        if (hitRoomId) {
+          selectDestinationRoom(hitRoomId, false);
+        }
+      }
+    }
+
+    function onWindowResize() {
+      const container = document.getElementById('canvas-container');
+      if (!container || !renderer || !camera) return;
+      const w = Math.max(container.clientWidth, 300);
+      const h = Math.max(container.clientHeight, 300);
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+      renderer.setSize(w, h);
+    }
+
+    function project3DToScreen(vec3, containerW, containerH) {
+      const cloned = vec3.clone().project(camera);
+      if (cloned.z > 1) return null;
+      return {
+        x: Math.round((cloned.x * 0.5 + 0.5) * containerW),
+        y: Math.round((-(cloned.y * 0.5) + 0.5) * containerH)
+      };
+    }
+
+    function animateLoop() {
+      requestAnimationFrame(animateLoop);
+
+      const t = performance.now() * 0.001;
+
+      if (camFlight.active) {
+        controls.target.lerp(camFlight.targetGoal, 0.15);
+        camera.position.lerp(camFlight.posGoal, 0.15);
+        if (
+          controls.target.distanceTo(camFlight.targetGoal) < 0.08 &&
+          camera.position.distanceTo(camFlight.posGoal) < 0.15
+        ) {
+          camFlight.active = false;
+        }
+      }
+      controls.update();
+
+      if (beaconGroup && beaconGroup.children[0]) {
+        beaconGroup.children[0].position.y = 1.9 + Math.sin(t * 4.0) * 0.2;
+      }
+
+      routeParticles.forEach(p => {
+        const u = (t * 0.25 + p.offset) % 1;
+        const pos = p.curve.getPointAt(u);
+        p.mesh.position.copy(pos);
+        p.mesh.visible = state.activeFloor === 'all' ||
+          Math.abs(pos.y - (getFloorY(Number(state.activeFloor)) + 0.55)) < 1.6;
+      });
+
+      renderer.render(scene, camera);
+
+      const container = document.getElementById('canvas-container');
+      const w = container.clientWidth;
+      const h = container.clientHeight;
+
+      const worldPos = new THREE.Vector3();
+      labelElements.forEach(({ room, mesh, el }) => {
+        if (el.style.display === 'none') return;
+        mesh.getWorldPosition(worldPos);
+        worldPos.y += room.isGym ? 1.8 : 0.85;
+        const screen = project3DToScreen(worldPos, w, h);
+        if (!screen) {
+          el.style.opacity = '0';
+        } else {
+          el.style.opacity = '1';
+          el.style.transform = `translate3d(${screen.x}px, ${screen.y}px, 0) translate(-50%, -100%)`;
+        }
+      });
+
+      bldgBadgeElements.forEach(({ bh, el }) => {
+        if (state.labelMode === 'off') {
+          el.style.display = 'none';
+          return;
+        }
+        el.style.display = 'block';
+        const topFl = state.activeFloor === 'all' ? bh.topFloor : Number(state.activeFloor);
+        const topY = getFloorY(topFl) + 2.4;
+        const screen = project3DToScreen(new THREE.Vector3(bh.x, topY, bh.z), w, h);
+        if (!screen) {
+          el.style.opacity = '0';
+        } else {
+          el.style.opacity = '1';
+          el.style.transform = `translate3d(${screen.x}px, ${screen.y}px, 0) translate(-50%, -50%)`;
+        }
+      });
+
+      const beaconLabel = document.getElementById('beacon-3d-label');
+      if (beaconLabel && beaconGroup.visible && state.labelMode !== 'off') {
+        beaconLabel.style.display = 'flex';
+        const bWorld = beaconGroup.position.clone();
+        bWorld.y += 2.8;
+        const bScreen = project3DToScreen(bWorld, w, h);
+        if (bScreen) {
+          beaconLabel.style.opacity = '1';
+          beaconLabel.style.transform = `translate3d(${bScreen.x}px, ${bScreen.y}px, 0) translate(-50%, -100%)`;
+        } else {
+          beaconLabel.style.opacity = '0';
+        }
+      } else if (beaconLabel) {
+        beaconLabel.style.display = 'none';
+      }
+    }
+
+    // =========================================================================
+    // 6. UI Rendering & Event Wiring
+    // =========================================================================
+    let ROOMS_ORIG = null;
+
+    function showToastBanner(message) {
+      const bannerText = document.getElementById('nfc-banner-text');
+      const banner = document.getElementById('nfc-scan-banner');
+      bannerText.textContent = message;
+      banner.classList.remove('opacity-0', '-translate-y-2');
+      banner.classList.add('opacity-100', 'translate-y-0');
+      if (bannerTimeout) clearTimeout(bannerTimeout);
+      bannerTimeout = setTimeout(() => {
+        banner.classList.remove('opacity-100', 'translate-y-0');
+        banner.classList.add('opacity-0', '-translate-y-2');
+      }, 2600);
+    }
+
+    function copyText(text, onDone) {
+      const done = () => { if (onDone) onDone(); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done).catch(() => { fallbackCopyText(text); done(); });
+      } else {
+        fallbackCopyText(text);
+        done();
+      }
+    }
+
+    function fallbackCopyText(text) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+    }
+
+    function applyViewMode() {
+      document.body.dataset.view = state.view;
+      const banner = document.getElementById('preview-banner');
+      banner.classList.toggle('hidden', !state.previewing);
+      banner.classList.toggle('flex', state.previewing);
+    }
+
+    function setTab(tab) {
+      state.tab = tab;
+      document.getElementById('panel-route').classList.toggle('hidden', tab !== 'route');
+      const find = document.getElementById('panel-find');
+      find.classList.toggle('hidden', tab !== 'find');
+      find.classList.toggle('flex', tab === 'find');
+      const sb = document.getElementById('sidebar');
+      sb.classList.toggle('h-[48dvh]', tab !== 'find');
+      sb.classList.toggle('h-[80dvh]', tab === 'find');
+      document.querySelectorAll('.side-tab').forEach(b => {
+        const active = b.dataset.tab === tab;
+        b.className = 'side-tab flex-1 py-2.5 transition ' + (active
+          ? 'bg-slate-800 text-white border-b-2 border-sky-400'
+          : 'text-slate-400 hover:text-white hover:bg-slate-800/50 border-b-2 border-transparent');
+      });
+    }
+
+    function syncFloorButtons() {
+      document.querySelectorAll('.floor-btn').forEach(b => {
+        const active = b.dataset.floor === String(state.activeFloor);
+        b.className = active
+          ? 'floor-btn px-2 py-1 rounded-lg text-xs font-bold transition bg-sky-600 text-white'
+          : 'floor-btn px-2 py-1 rounded-lg text-xs font-bold transition text-slate-300 hover:bg-slate-800';
+      });
+    }
+
+    function setActiveFloor(f) {
+      state.activeFloor = String(f);
+      syncFloorButtons();
+      updateSceneState();
+    }
+
+    function applyWeatherUI() {
+      const label = document.getElementById('weather-btn-label');
+      const badge = document.getElementById('weather-status-badge');
+      if (state.weather === 'rain') {
+        label.textContent = '天候: ☔ 雨天(3F通路止)';
+        badge.textContent = '雨天(第一産振3F通路止)';
+        badge.className = 'text-[10px] font-semibold px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/40';
+      } else {
+        label.textContent = '天候: ☀️ 晴天';
+        badge.textContent = '晴天';
+        badge.className = 'text-[10px] font-semibold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30';
+      }
+    }
+
+    function applyModeUI() {
+      const modeBadge = document.getElementById('current-mode-badge');
+      if (state.mode === 'festival') {
+        modeBadge.textContent = '文化祭モード';
+        modeBadge.className = 'text-[10px] font-semibold px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40';
+      } else {
+        modeBadge.textContent = '通常校舎案内';
+        modeBadge.className = 'text-[10px] font-semibold px-2 py-0.5 rounded-full bg-sky-500/20 text-sky-300 border border-sky-500/30';
+      }
+    }
+
+    function renderNfcSpotButtons() {
+      const container = document.getElementById('nfc-spot-buttons');
+      container.innerHTML = '';
+      NFC_SPOTS.forEach(spot => {
+        const isActive = spot.id === state.activeSpotId;
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = isActive
+          ? 'px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-400 text-slate-950 shadow transition'
+          : 'px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white border border-slate-700 transition';
+        btn.textContent = spot.shortName;
+        btn.addEventListener('click', () => triggerNfcSpotScan(spot.id));
+        container.appendChild(btn);
+      });
+    }
+
+    function triggerNfcSpotScan(spotId) {
+      state.activeSpotId = spotId;
+      const spot = currentSpot();
+      showToastBanner(`「${spot.name}」のNFCタグを読み取りました`);
+      state.stepIdx = -1;
+      renderNfcSpotButtons();
+      renderPopularChips();
+      updateSceneState();
+      updateModalNfcGenerator();
+      if (state.selectedRoomId) frameRoute();
+    }
+
+    function selectDestinationRoom(roomId, flyCamera = false) {
+      state.selectedRoomId = roomId || null;
+      state.stepIdx = -1;
+      if (roomId && flyCamera && state.activeFloor !== 'all') {
+        state.activeFloor = 'all';
+        syncFloorButtons();
+      }
+      setTab(roomId ? 'route' : 'find');
+      renderRoomDirectory();
+      renderPopularChips();
+      updateSceneState();
+      updateModalNfcGenerator();
+      if (roomId && flyCamera) frameRoute();
+    }
+
+    function focusRoomCloseUp(room) {
+      const y = getFloorY(room.floor);
+      flyToView(room.x, y + 0.6, room.z, room.x + 34, y + 18, room.z, false);
+    }
+
+    function renderPopularChips() {
+      const el = document.getElementById('popular-chips');
+      if (!el) return;
+      const here = currentSpot().roomId;
+      el.innerHTML = POPULAR_IDS
+        .map(id => ROOMS.find(r => r.id === id))
+        .filter(r => r && r.id !== here)
+        .map(r => {
+          const sel = r.id === state.selectedRoomId;
+          const cls = sel
+            ? 'bg-sky-500/25 border-sky-400 text-sky-200'
+            : 'bg-slate-800 border-slate-700 text-slate-100 hover:bg-slate-700';
+          return `<button type="button" data-room="${esc(r.id)}" class="popular-chip px-2.5 py-1.5 rounded-full text-[12px] font-semibold border transition ${cls}">${esc(r.shortLabel || getRoomTitle(r))}</button>`;
+        }).join('');
+    }
+
+    function renderRoomDirectory() {
+      const container = document.getElementById('room-list-container');
+      container.innerHTML = '';
+
+      const q = normText(state.searchQuery).trim();
+      const filtered = ROOMS.filter(room => {
+        if (state.buildingFilter !== 'all' && room.building !== state.buildingFilter) return false;
+        if (state.categoryFilter !== 'all' && room.category !== state.categoryFilter) return false;
+        if (q) {
+          const text = normText(`${room.building} ${getRoomTitle(room)} ${room.shortLabel || ''} ${getRoomDesc(room)} ${room.floor}F`);
+          return text.includes(q);
+        }
+        return true;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = '<div class="text-xs text-slate-400 text-center py-6">該当する部屋が見つかりません</div>';
+        return;
+      }
+
+      filtered.forEach(room => {
+        const isSelected = room.id === state.selectedRoomId;
+        const card = document.createElement('button');
+        card.type = 'button';
+        card.className = isSelected
+          ? 'w-full text-left p-3 rounded-lg bg-sky-500/20 border border-sky-400/70 transition flex items-center justify-between gap-2'
+          : 'w-full text-left p-3 rounded-lg bg-slate-800/50 hover:bg-slate-800 border border-slate-800 transition flex items-center justify-between gap-2';
+        const floorTag = room.building === '屋外・体育館' ? '屋外' : `${room.floor}F`;
+        card.innerHTML = `
+          <div class="min-w-0 flex items-center gap-1.5">
+            <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-slate-900 text-indigo-300 border border-indigo-500/30 shrink-0">${esc(room.building)}</span>
+            <span class="text-[10px] font-bold px-1 py-0.5 rounded bg-sky-500/20 text-sky-300 shrink-0">${floorTag}</span>
+            <span class="text-sm font-bold text-white truncate">${esc(getRoomTitle(room))}</span>
+          </div>
+          <span class="text-[10px] font-semibold ${isSelected ? 'text-sky-300' : 'text-slate-400'} shrink-0">
+            ${isSelected ? '★案内中' : 'ここへ ▶'}
+          </span>
+        `;
+        card.addEventListener('click', () => selectDestinationRoom(room.id, true));
+        container.appendChild(card);
+      });
+    }
+
+    // =========================================================================
+    // 7. 管理モーダル（NFC URL発行・部屋編集・バックアップ）
+    // =========================================================================
+    function populateModalSelects(keepEditId) {
+      const spotSelect = document.getElementById('modal-spot-select');
+      const keepSpot = spotSelect.value || state.activeSpotId;
+      spotSelect.innerHTML = NFC_SPOTS.map(s => `<option value="${esc(s.id)}">${esc(s.name)}</option>`).join('');
+      spotSelect.value = keepSpot;
+
+      const destSelect = document.getElementById('modal-dest-select');
+      const keepDest = destSelect.value || '';
+      destSelect.innerHTML = `<option value="">指定なし（現在地のみ表示）</option>` +
+        ROOMS.map(r => `<option value="${esc(r.id)}">[${esc(r.building)} ${r.floor}F] ${esc(getRoomTitle(r))}</option>`).join('');
+      destSelect.value = keepDest;
+
+      const editSelect = document.getElementById('edit-room-select');
+      editSelect.innerHTML = ROOMS.map(r => `<option value="${esc(r.id)}">[${esc(r.building)} ${r.floor}F] ${esc(getRoomTitle(r))}</option>`).join('');
+      editSelect.value = keepEditId || state.selectedRoomId || ROOMS[0].id;
+      syncEditRoomInputs();
+    }
+
+    function syncEditRoomInputs() {
+      const editSelect = document.getElementById('edit-room-select');
+      const room = ROOMS.find(r => r.id === editSelect.value) || ROOMS[0];
+      document.getElementById('edit-room-name').value = getRoomTitle(room);
+      document.getElementById('edit-room-desc').value = getRoomDesc(room);
+      document.getElementById('edit-room-x').value = room.x;
+      document.getElementById('edit-room-z').value = room.z;
+      document.getElementById('edit-room-w').value = room.w;
+      document.getElementById('edit-room-d').value = room.d;
+    }
+
+    function buildTagUrl(spotId, destId) {
+      const baseInput = document.getElementById('modal-base-url');
+      const baseUrl = ((baseInput && baseInput.value) || defaultBaseUrl()).trim();
+      const festivalChk = document.getElementById('modal-festival-chk');
+      const params = new URLSearchParams();
+      params.set('spot', spotId);
+      if (destId) params.set('dest', destId);
+      if (festivalChk && festivalChk.checked) params.set('mode', 'festival');
+      const separator = baseUrl.includes('?') ? '&' : '?';
+      return `${baseUrl}${separator}${params.toString()}`;
+    }
+
+    function ndefBytesOf(url) {
+      // NDEF URIレコード：URL本体(https://省略) + 識別コード1 + レコード/TLV管理 約7バイト
+      const stripped = url.replace(/^https?:\/\//i, '');
+      return new TextEncoder().encode(stripped).length + 8;
+    }
+
+    function updateModalNfcGenerator() {
+      const spotSelect = document.getElementById('modal-spot-select');
+      const destSelect = document.getElementById('modal-dest-select');
+      if (!spotSelect || !destSelect) return;
+
+      const fullUrl = buildTagUrl(spotSelect.value || state.activeSpotId, destSelect.value || '');
+      document.getElementById('generated-nfc-url').textContent = fullUrl;
+
+      const ndefBytes = ndefBytesOf(fullUrl);
+      document.getElementById('ndef-byte-count').textContent = String(ndefBytes);
+
+      const checkChip = (bytes, maxBytes, elId) => {
+        const el = document.getElementById(elId);
+        const remain = maxBytes - bytes;
+        if (remain >= 0) {
+          el.textContent = `OK (残${remain}B)`;
+          el.className = 'text-emerald-400 font-semibold mt-0.5';
+        } else {
+          el.textContent = `超過 (${Math.abs(remain)}B)`;
+          el.className = 'text-rose-400 font-semibold mt-0.5';
+        }
+      };
+      checkChip(ndefBytes, 144, 'chip-fit-213');
+      checkChip(ndefBytes, 504, 'chip-fit-215');
+      checkChip(ndefBytes, 888, 'chip-fit-216');
+
+      const statusLabel = document.getElementById('ntag-status-label');
+      if (ndefBytes <= 144) {
+        statusLabel.textContent = 'NTAG213 / 215 / 216 すべて対応';
+        statusLabel.className = 'text-emerald-400 font-semibold';
+      } else if (ndefBytes <= 504) {
+        statusLabel.textContent = 'NTAG215 または NTAG216 を推奨';
+        statusLabel.className = 'text-amber-300 font-semibold';
+      } else {
+        statusLabel.textContent = 'NTAG216 または短縮URLが必要';
+        statusLabel.className = 'text-rose-400 font-semibold';
+      }
+
+      const listEl = document.getElementById('all-tag-urls');
+      if (listEl) {
+        listEl.innerHTML = NFC_SPOTS.map(s => {
+          const url = buildTagUrl(s.id, '');
+          return `<div class="flex items-center gap-2 bg-slate-950 border border-slate-800 rounded-lg px-2 py-1.5">
+            <div class="min-w-0 flex-1">
+              <div class="text-[11px] font-bold text-slate-200">${esc(s.name)}</div>
+              <code class="text-[10px] text-emerald-300 font-mono break-all">${esc(url)}</code>
+            </div>
+            <button type="button" data-copy="${esc(url)}" class="copy-tag-btn px-2 py-1 rounded bg-slate-700 hover:bg-slate-600 text-white text-[11px] font-semibold shrink-0">コピー</button>
+          </div>`;
+        }).join('');
+      }
+    }
+
+    function rebuildAll(keepEditId) {
+      buildCampusFloors();
+      buildGraph();
+      renderRoomDirectory();
+      renderPopularChips();
+      populateModalSelects(keepEditId);
+      updateSceneState();
+      updateModalNfcGenerator();
+    }
+
+    function restoreOriginalRooms() {
+      ROOMS_ORIG.forEach(orig => {
+        const room = ROOMS.find(r => r.id === orig.id);
+        if (room) EDITABLE_FIELDS.forEach(f => { room[f] = orig[f]; });
+      });
+    }
+
+    function flashFeedback(id, text) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.textContent = text;
+      setTimeout(() => { el.textContent = ''; }, 2400);
+    }
+
+    // =========================================================================
+    // 8. Initialize Controls & Snap View Buttons
+    // =========================================================================
+    function initControls() {
+      const guidedBtn = document.getElementById('drag-mode-guided-btn');
+      const panBtn = document.getElementById('drag-mode-pan-btn');
+      const rotateBtn = document.getElementById('drag-mode-rotate-btn');
+
+      const setDragMode = (mode) => {
+        state.dragMode = mode;
+        state.isTopView = false;
+        applyDragModeToControls();
+        guidedBtn.className = mode === 'guided'
+          ? 'px-2 py-1 rounded-lg font-bold transition bg-emerald-500 text-slate-950'
+          : 'px-2 py-1 rounded-lg font-bold transition text-slate-300 hover:bg-slate-800';
+        panBtn.className = mode === 'pan'
+          ? 'px-2 py-1 rounded-lg font-bold transition bg-amber-400 text-slate-950'
+          : 'px-2 py-1 rounded-lg font-bold transition text-slate-300 hover:bg-slate-800';
+        rotateBtn.className = mode === 'rotate'
+          ? 'px-2 py-1 rounded-lg font-bold transition bg-sky-500 text-white'
+          : 'px-2 py-1 rounded-lg font-bold transition text-slate-300 hover:bg-slate-800';
+      };
+
+      guidedBtn.addEventListener('click', () => {
+        setDragMode('guided');
+        flyToView(2, 3.5, -2, camera.position.x, Math.max(camera.position.y, 22), camera.position.z, false);
+      });
+      panBtn.addEventListener('click', () => setDragMode('pan'));
+      rotateBtn.addEventListener('click', () => setDragMode('rotate'));
+
+      // Zoom & Rotate buttons
+      document.getElementById('zoom-in-btn').addEventListener('click', () => {
+        camFlight.active = false;
+        const offset = camera.position.clone().sub(controls.target);
+        if (offset.length() > 16) {
+          offset.multiplyScalar(0.78);
+          camera.position.copy(controls.target).add(offset);
+          controls.update();
+        }
+      });
+      document.getElementById('zoom-out-btn').addEventListener('click', () => {
+        camFlight.active = false;
+        const offset = camera.position.clone().sub(controls.target);
+        if (offset.length() < 90) {
+          offset.multiplyScalar(1.25);
+          camera.position.copy(controls.target).add(offset);
+          controls.update();
+        }
+      });
+      const rotateCameraByAngle = (angleRad) => {
+        camFlight.active = false;
+        const offset = camera.position.clone().sub(controls.target);
+        const cosA = Math.cos(angleRad);
+        const sinA = Math.sin(angleRad);
+        const nx = offset.x * cosA - offset.z * sinA;
+        const nz = offset.x * sinA + offset.z * cosA;
+        offset.x = nx;
+        offset.z = nz;
+        camera.position.copy(controls.target).add(offset);
+        controls.update();
+      };
+      document.getElementById('rotate-left-btn').addEventListener('click', () => rotateCameraByAngle(Math.PI / 4));
+      document.getElementById('rotate-right-btn').addEventListener('click', () => rotateCameraByAngle(-Math.PI / 4));
+
+      // Weather & Mode
+      document.getElementById('weather-toggle-btn').addEventListener('click', () => {
+        state.weather = state.weather === 'sunny' ? 'rain' : 'sunny';
+        applyWeatherUI();
+        updateSceneState();
+      });
+      const setAppMode = (newMode) => {
+        state.mode = newMode;
+        applyModeUI();
+        renderRoomDirectory();
+        renderPopularChips();
+        updateSceneState();
+        populateModalSelects(document.getElementById('edit-room-select').value);
+        updateModalNfcGenerator();
+      };
+            
+      // Floors / explode
+      document.querySelectorAll('.floor-btn').forEach(btn => {
+        btn.addEventListener('click', () => setActiveFloor(btn.dataset.floor));
+      });
+      const explodeBtn = document.getElementById('toggle-explode-btn');
+      explodeBtn.addEventListener('click', () => {
+        state.explodedView = !state.explodedView;
+        explodeBtn.textContent = state.explodedView ? '展開: ON' : '展開: OFF';
+        updateSceneState();
+      });
+
+      // Camera snap views (正面 = 東側 +X)
+      document.getElementById('cam-front-btn').addEventListener('click', () => flyToView(2, 3.5, -2, 48, 22, -2, false));
+      document.getElementById('cam-reset-btn').addEventListener('click', () => flyToView(-14, 2.0, -2, 91, 70, -2, false));
+      document.getElementById('cam-right-btn').addEventListener('click', () => flyToView(0, 3.0, -4, 42, 28, -36, false));
+      document.getElementById('cam-left-btn').addEventListener('click', () => flyToView(0, 3.0, 4, 42, 28, 36, false));
+      document.getElementById('cam-back-btn').addEventListener('click', () => flyToView(0, 3.0, 0, -52, 28, 0, false));
+      document.getElementById('cam-top-btn').addEventListener('click', () => flyToView(-22, 0.0, -10, -18, 140, -10, true));
+
+      const labelsBtn = document.getElementById('toggle-labels-btn');
+      labelsBtn.addEventListener('click', () => {
+        if (state.labelMode === 'smart') {
+          state.labelMode = 'all';
+          labelsBtn.textContent = 'ラベル: 全表示';
+        } else if (state.labelMode === 'all') {
+          state.labelMode = 'off';
+          labelsBtn.textContent = 'ラベル: 非表示';
+        } else {
+          state.labelMode = 'smart';
+          labelsBtn.textContent = 'ラベル: 表示';
+        }
+        updateSceneState();
+      });
+
+      // Sidebar: tabs / steps / destination
+      document.querySelectorAll('.side-tab').forEach(b => {
+        b.addEventListener('click', () => setTab(b.dataset.tab));
+      });
+      document.getElementById('go-find-btn').addEventListener('click', () => setTab('find'));
+      document.getElementById('route-steps-list').addEventListener('click', (e) => {
+        const btn = e.target.closest('.step-item');
+        if (btn) focusStep(Number(btn.dataset.step));
+      });
+      document.getElementById('step-next-btn').addEventListener('click', () => focusStep(state.stepIdx + 1));
+      document.getElementById('step-prev-btn').addEventListener('click', () => focusStep(state.stepIdx - 1));
+      document.getElementById('step-overview-btn').addEventListener('click', () => focusStep(-1));
+      document.getElementById('focus-dest-btn').addEventListener('click', () => {
+        const room = currentDest();
+        if (!room) return;
+        if (state.activeFloor !== 'all') { state.activeFloor = String(room.floor); syncFloorButtons(); updateSceneState(); }
+        focusRoomCloseUp(room);
+      });
+      document.getElementById('clear-dest-btn').addEventListener('click', () => {
+        state.activeFloor = 'all';
+        syncFloorButtons();
+        selectDestinationRoom(null, false);
+        flyToView(2, 3.5, -2, 48, 22, -2, false);
+      });
+
+      document.getElementById('popular-chips').addEventListener('click', (e) => {
+        const btn = e.target.closest('.popular-chip');
+        if (btn) selectDestinationRoom(btn.dataset.room, true);
+      });
+      document.getElementById('room-search-input').addEventListener('input', (e) => {
+        state.searchQuery = e.target.value;
+        renderRoomDirectory();
+      });
+
+      // Building filter tabs also glide camera
+      const bldgCenters = {
+        'all': { tx: 2, ty: 3.5, tz: -2, px: 52, py: 26, pz: -2 },
+        '本館': { tx: 13.5, ty: 2.5, tz: 6.3, px: 38, py: 18, pz: 6.3 },
+        '教室棟': { tx: 0, ty: 3.5, tz: 0, px: 36, py: 24, pz: 0 },
+        '第一産振棟': { tx: -16.5, ty: 2.5, tz: -14.0, px: 14, py: 22, pz: -14.0 },
+        '第2産振棟': { tx: 13.5, ty: 3.5, tz: 19.5, px: 38, py: 20, pz: 19.5 },
+        '家庭科棟': { tx: -16.5, ty: 2.5, tz: -22.0, px: 14, py: 22, pz: -22.0 },
+        '理科棟': { tx: -34.3, ty: 2.5, tz: -22.0, px: 14, py: 22, pz: -22.0 },
+        '屋外・体育館': { tx: 14.0, ty: 1.5, tz: -5.0, px: 46, py: 26, pz: -5.0 }
+      };
+      document.querySelectorAll('.bldg-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          state.buildingFilter = btn.dataset.bldg;
+          document.querySelectorAll('.bldg-btn').forEach(b => {
+            const active = b.dataset.bldg === state.buildingFilter;
+            b.className = active
+              ? 'bldg-btn px-2 py-0.5 rounded text-[11px] font-semibold bg-indigo-600 text-white shrink-0'
+              : 'bldg-btn px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-800 text-slate-300 hover:text-white shrink-0';
+          });
+          const c = bldgCenters[state.buildingFilter];
+          if (c) flyToView(c.tx, c.ty, c.tz, c.px, c.py, c.pz, false);
+          renderRoomDirectory();
+          updateSceneState();
+        });
+      });
+      document.querySelectorAll('.cat-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          state.categoryFilter = btn.dataset.cat;
+          document.querySelectorAll('.cat-btn').forEach(b => {
+            const active = b.dataset.cat === state.categoryFilter;
+            b.className = active
+              ? 'cat-btn px-2 py-0.5 rounded text-[10px] font-semibold bg-sky-600 text-white shrink-0'
+              : 'cat-btn px-2 py-0.5 rounded text-[10px] font-semibold bg-slate-800 text-slate-300 hover:text-white shrink-0';
+          });
+          renderRoomDirectory();
+        });
+      });
+
+      // 来訪者画面プレビュー
+      let previewBackupDest = null;
+      document.getElementById('preview-visitor-btn').addEventListener('click', () => {
+        previewBackupDest = state.selectedRoomId;
+        state.previewing = true;
+        state.view = 'visitor';
+        applyViewMode();
+        state.activeFloor = 'all';
+        syncFloorButtons();
+        selectDestinationRoom(null, false);
+        flyToView(2, 3.5, -2, 48, 22, -2, false);
+        showToastBanner(`${currentSpot().shortName} からご案内します`);
+      });
+      document.getElementById('exit-preview-btn').addEventListener('click', () => {
+        state.previewing = false;
+        state.view = 'admin';
+        applyViewMode();
+        selectDestinationRoom(previewBackupDest || 'programming_lab', false);
+      });
+
+      // Modal
+      const modal = document.getElementById('nfc-modal');
+      const openModal = () => {
+        populateModalSelects();
+        updateModalNfcGenerator();
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      };
+      const closeModal = () => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      };
+      document.getElementById('open-nfc-modal-btn').addEventListener('click', openModal);
+      document.getElementById('close-nfc-modal-btn').addEventListener('click', closeModal);
+      modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+
+      document.getElementById('modal-spot-select').addEventListener('change', (e) => triggerNfcSpotScan(e.target.value));
+      document.getElementById('modal-dest-select').addEventListener('change', updateModalNfcGenerator);
+      document.getElementById('modal-festival-chk').addEventListener('change', updateModalNfcGenerator);
+      const baseInput = document.getElementById('modal-base-url');
+      baseInput.value = defaultBaseUrl();
+      baseInput.addEventListener('input', () => {
+        overrides.baseUrl = baseInput.value.trim();
+        saveOverrides();
+        updateModalNfcGenerator();
+      });
+
+      const copyBtn = document.getElementById('copy-nfc-url-btn');
+      copyBtn.addEventListener('click', () => {
+        copyText(document.getElementById('generated-nfc-url').textContent, () => {
+          copyBtn.textContent = 'コピー完了！';
+          setTimeout(() => { copyBtn.textContent = 'URLをコピー'; }, 1800);
+        });
+      });
+      document.getElementById('all-tag-urls').addEventListener('click', (e) => {
+        const btn = e.target.closest('.copy-tag-btn');
+        if (!btn) return;
+        copyText(btn.dataset.copy, () => {
+          btn.textContent = '✓';
+          setTimeout(() => { btn.textContent = 'コピー'; }, 1500);
+        });
+      });
+
+      // 部屋編集
+      document.getElementById('edit-room-select').addEventListener('change', syncEditRoomInputs);
+      document.getElementById('save-room-edit-btn').addEventListener('click', () => {
+        const roomId = document.getElementById('edit-room-select').value;
+        const room = ROOMS.find(r => r.id === roomId);
+        if (!room) return;
+        const rec = Object.assign({}, overrides.rooms[roomId]);
+        const newName = document.getElementById('edit-room-name').value.trim();
+        const newDesc = document.getElementById('edit-room-desc').value.trim();
+        if (newName) rec[state.mode === 'festival' ? 'festivalName' : 'name'] = newName;
+        if (newDesc) rec[state.mode === 'festival' ? 'festivalDesc' : 'desc'] = newDesc;
+        const geo = { x: 'edit-room-x', z: 'edit-room-z', w: 'edit-room-w', d: 'edit-room-d' };
+        Object.keys(geo).forEach(k => {
+          const v = document.getElementById(geo[k]).value;
+          if (v !== '' && Number(v) !== room[k]) rec[k] = Number(v);
+        });
+        overrides.rooms[roomId] = rec;
+        overrides = sanitizeOverrides(overrides);
+        saveOverrides();
+        applyOverrides();
+        rebuildAll(roomId);
+        const fb = document.getElementById('save-room-feedback');
+        fb.classList.remove('hidden');
+        setTimeout(() => fb.classList.add('hidden'), 2000);
+      });
+
+      // バックアップ
+      const jsonArea = document.getElementById('overrides-json');
+      document.getElementById('export-overrides-btn').addEventListener('click', () => {
+        jsonArea.value = JSON.stringify(sanitizeOverrides(overrides), null, 1);
+        copyText(jsonArea.value, () => flashFeedback('overrides-feedback', 'コピーしました'));
+      });
+      document.getElementById('import-overrides-btn').addEventListener('click', () => {
+        try {
+          const parsed = sanitizeOverrides(JSON.parse(jsonArea.value));
+          restoreOriginalRooms();
+          overrides = parsed;
+          saveOverrides();
+          applyOverrides();
+          baseInput.value = defaultBaseUrl();
+          rebuildAll();
+          flashFeedback('overrides-feedback', '読み込みました');
+        } catch (e) {
+          flashFeedback('overrides-feedback', 'JSONを読み込めませんでした');
+        }
+      });
+      const resetBtn = document.getElementById('reset-overrides-btn');
+      let resetArmed = null;
+      resetBtn.addEventListener('click', () => {
+        if (!resetArmed) {
+          resetBtn.textContent = 'もう一度押すと初期化します';
+          resetArmed = setTimeout(() => { resetArmed = null; resetBtn.textContent = 'この端末の編集を初期化'; }, 3000);
+          return;
+        }
+        clearTimeout(resetArmed);
+        resetArmed = null;
+        resetBtn.textContent = 'この端末の編集を初期化';
+        restoreOriginalRooms();
+        overrides = { rooms: {}, baseUrl: '' };
+        saveOverrides();
+        baseInput.value = defaultBaseUrl();
+        jsonArea.value = '';
+        rebuildAll();
+        flashFeedback('overrides-feedback', '初期化しました');
+      });
+    }
+
+    window.addEventListener('load', () => {
+      ROOMS_ORIG = JSON.parse(JSON.stringify(ROOMS));
+      loadOverrides();
+      applyOverrides();
+      applyUrlParamsOnLoad();
+      initThreeScene();
+      buildGraph();
+      initControls();
+      applyViewMode();
+      applyWeatherUI();
+      applyModeUI();
+      syncFloorButtons();
+      renderNfcSpotButtons();
+      renderRoomDirectory();
+      renderPopularChips();
+      populateModalSelects();
+      setTab(state.selectedRoomId ? 'route' : 'find');
+      updateSceneState();
+      updateModalNfcGenerator();
+      animateLoop();
+      if (state.selectedRoomId) frameRoute();
+      if (state.view === 'visitor') showToastBanner(`${currentSpot().shortName} からご案内します`);
+    });
+  </script>
+</body>
+</html>
